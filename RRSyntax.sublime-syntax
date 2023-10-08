@@ -1,0 +1,344 @@
+%YAML 1.2
+---
+name: Rome Total War
+file_extensions: [txt]
+scope: text.rome
+
+variables:
+  valid_variable: '[A-Za-z_0-9-][A-Za-z_0-9\./-]*'
+
+# General idea behind scope naming:
+# string = triggers/strings - something that checks for something
+# entity.name = top level definitions or special words
+# keyword = commands/keywords - something that does something
+# variable.language.parameter = args/parameters
+# constant.numeric = numbers/textures/file paths/localization key
+# storage.type = boolean/something that takes a number as an arg
+
+
+contexts:
+  main:
+    - match: \bscript\b
+      scope: entity.name
+      push:
+        - include: script-block-includes
+        - match: \bend_script\b
+          scope: entity.name
+          pop: true
+
+    - match: \b(ambient_settlement|general_feature|tile_set|begin_colourmap|define_ground_type|begin_formation|disaster|daytype|weatherevent|effect|climate|custom_location|building|alias|Begin_Offices|Begin_Unit_Rewards)\b
+      # For top level definitions
+      scope: entity.name
+      push:
+        - match: (\w|\s|-)+
+          scope: variable.language.parameter
+          pop: true
+        - match: '\n'
+          pop: true
+
+    - match: \b(resource)\b
+      scope: string
+      push:
+        - match: '{{valid_variable}}'
+          scope: variable.language.parameter
+          pop: true
+        - match: '\n'
+          pop: true
+
+    - match: \b(icon|symbols)\b
+      scope: constant.numeric
+      push:
+        - match: '{{valid_variable}}'
+          scope: variable.language.parameter
+          pop: true
+        - match: '\n'
+          pop: true
+
+    - match: \b(culture)\b
+      scope: string
+      push:
+        - match: '{{valid_variable}}'
+          scope: storage.type
+          pop: true
+        - match: '\n'
+          pop: true
+
+    - match: \b(effect_set)\b
+      scope: entity.name
+      push:
+        - match: \s+<
+          scope: keyword
+          push:
+            - match: (\d|\s)+
+              scope: constant.numeric
+            - match: '>'
+              scope: keyword
+              pop: 1
+        - match: (\w|\s)+
+          scope: variable.language.parameter
+          pop: true
+        - match: '\n'
+          pop: true
+
+    - match: \b(fort|plan_set|plan_levels|plan|gateway_slot|group|slot)\b
+      scope: constant.numeric
+      push:
+        - match: '{{valid_variable}}'
+          scope: variable.language.parameter
+          pop: true
+        - match: '\n'
+          pop: true
+
+    - match: '(forts|baggage_trains|\bcamps\b|plan_sets|plans_by_level|plans|gateway_slots|\bslots\b|culture_groups|ambient_groups|climate_groups|\bprimary\b|\bEnd\b)\n'
+      scope: entity.name
+
+    - match: '(\bvariant(\s\d)?\b)\n'
+      scope: keyword
+
+    - match: '(\btags\b|\bcultures\b|\bbuildings\b)\n'
+      scope: storage.type
+
+    - match: '(\bcamp\b|baggage_train)\n'
+      scope: constant.numeric
+
+    # Purple
+    - match: \b(rebel_type|filename|mount|rebalance_statblock|file_army_banner|file_navy_banner|default|minor_exotic_unit|eagle_units|major_exotic_unit|Title|Description|lod(\t|\s)+||lods(\t|\s)+|horse_type|model_flexi|model_flexi_m|no_variation model_flexi_m|no_variation model_flexi|pbr_texture|texture|faction\s|group\s||no_variation model|strat_card|strat_model|battle_model|battle_equip|standard_texture|rebels_texture|routing_texture|ally_texture|banner|model|skeleton|outline|model|skeleton|outline|model|skeleton|outline|faction|faction_creator|plan_set|ai_destruction_hint|tag|plugins|settlement_min|upgrades|capability|icon|type|dictionary|soldier|ownership|ethnicity|requires factions)\b
+      scope: constant.numeric
+    # Strings Yellow
+    - match: \b(tattoo_color|display_string|body|male|tired|character_record|relative|traits|level|region|officer|category|class|voice_type|attributes)\b
+      scope: string
+    # Effects Red
+    - match: \b(end_block|begin_block|mount_effect|Senate_benefits|End_senate_benefits|Restrictions|End_restrictions|water_trail_effect|water_trail_effect_running|actions|army|unit|ancillaries|building|major_event|recruit|voice_indexes|formation|stat_health|stat_pri|stat_sec|stat_pri_armour|stat_sec_armour|stat_heat|stat_ground|stat_mental|stat_charge_dist|stat_fire_delay|stat_food|stat_cost)\b
+      scope: keyword
+    # Boolean Blue
+    - match:  \b(ai_priority|heading_items|year|position|width|offset|range|size|true|false|file_scale|file_scale|banner_star|banner_button|banner_flag|banner_sail|rebel_city_lower_boundary|take_city_lower_boundary|take_city_higher_boundary|max_region_traversal|rebel_city_higher_boundary|major_reward|moderate_reward|minor_reward|major_fine|moderate_fine|minor_fine|Rank|Quantity|Duration|Sittings|attitude_boundary_.|turn_coefficient|strength_coefficient|relative_strength_coefficient|combined_strength_coefficient|probability_of_random_mission|appreciation_duration|displeasure_duration|dead_radius|tusk_z|tusk_radius|scorpion_offset|scorpion_height|scorpion_forward_length|scorpion_reload_ticks|horses|horse_offset|horse_offset|riders|axle_width|wheel_radius|pivot_offset|pole_length|pole_pivot|pole_connect|harness_connect|attack_delay|scythe_radius|revs_per_attack|root_node_height|rider_offset|radius|x_radius|height|mass|banner_height|bouyancy_offset|angry_face|aged|medieval_features|wage_base|denari|year_founded|population|is_toggled|not|or|construction|cost|levels|stat_pri_attr|stat_sec_attr)\b
+      scope: storage.type
+    # Bonuses (orange)
+    - match: \b(weapon_bladed bonus|law_bonus bonus|farming_level bonus|armour bonus|weapon_simple bonus|recruits_exp_bonus bonus|recruits_morale_bonus bonus|population_health_bonus bonus|population_growth_bonus bonus|trade_base_income_bonus bonus|happiness_bonus bonus)\b
+      scope: variable.language.parameter
+    # Green
+    - match: \b(end_colourmap|end_define_ground_type|end_formation|End_Offices|factions|Help_Player|Destroy_Rebel_City|Take_City|Break_Alliance|Annex_City|Blockade_Port|Capture_Rebel_City|Get_Map_Info|Appease|Make_Alliance|Give_Cash|Cease_Hostilities|Give_Back_City|Subjugate|Broker_Peace|Make_Trade_Agreement|Exact_Tribute|Declare_War|Demand_Suicide|Attack_Outlaw_Faction|Assassinate|End_Unit_Rewards|requires_event|Censor|Consul|Praetor|Aedile|Quaestor|faction_relationships\s+|core_attitudes\s+|character\s+|settlement|requires)\b
+      scope: entity.name
+
+    - match: \b\d+(f)?\b
+      scope: constant.numeric
+
+    - include: operators
+    - include: comments
+
+    - match: '"'
+      push: string
+
+  operators:
+    - match: '\*|!=|==|:|!|=|&&|>=|<=|-|<|>'
+      scope: keyword
+
+  comments:
+    - match: (¬|;).*$\n?
+      scope: comment.line
+
+  comments-pop:
+    - match: (¬|;).*$\n?
+      scope: comment.line
+      pop: true
+
+
+  bools:
+    - match: \b(and|not|or|TrueCondition|off|on|yes|no|true|false)\b
+      scope: storage.type
+
+  script-block-includes:
+    - include: operators
+    - include: comments
+    - include: bools
+    - match: \b\d+(f)?\b
+      scope: constant.numeric
+    - match: \b(end_while|end_for|if|if_not|end_monitor|end_if|clear_restrict_strat_movement|disable_diplomacy_ui|disable_agent_hub_all|enable_agent_hub_all|trigger_marriage_proposal|deselect_current_selection|create_mercenary_pool|stop_point_at_indicator|stop_all_point_at_indicators|clear_strat_selection_unblocker|open_stop_tutorial_confirmation_dialog|set_label|goto|force_deselect_trigger|toggle_minimap|close_news_panel|pause_battle|e_camera_zoom_to_unit|declare_prologue|disable_popups|end_benchmark|script|terminate_script|break|terminate_monitor|prepare_for_battle|declare_show_me|release_music_control|e_point_at_settlement|ui_flash_stop|remove_battle_map_arrow|hide_ui|show_ui|disable_entire_ui|enable_entire_ui|disable_cursor|enable_cursor|hide_all_revealed_tiles|dismiss_advice|dismiss_advisor|e_select_character|e_select_settlement|e_select_unit|open_siege_scroll|select_captial|show_building_info|show_unit_info)\b
+      scope: keyword.command
+    - match: \b(I_BattleEnemyArmyNumberOfUnits|I_InBattle|WonBattle|I_WonBattle|Routs|Ally_Routs|GeneralFoughtInCombat|IsNightBattle|WasAttacker|I_BattleSettlementWallsBreached|I_BattleSettlementGateDestroyed|BattlePlayerUnitOnWalls|BattleEnemyUnitOnWalls|BattlePlayerUnitCloseFormation|BattleEnemyUnitCloseFormation|BattlePlayerUnitSpecialAbilityActive|BattleEnemyUnitSpecialAbilityActive|BattlePlayerUnitEngaged|BattleEnemyUnitEngaged|BattlePlayerUnitMovingFast|BattleEnemyUnitMovingFast|BattleIsMeleeAttack|I_BattleStarted|I_BattleFinished|I_BattleEnd|I_BattleEndPending|I_MultipleUnitsSelected|LocalPlayerHasManualReinforcements|LocalPlayerHasAIReinforcements|NoActionThisTurn|IsGeneral|IsAdmiral|RemasteredEducation|EndedInSettlement|IsFactionLeader|IsFactionHeir|IsMarried|AtSea|InEnemyLands|InBarbarianLands|InUncivilisedLands|IsBesieging|IsUnderSiege|I_WithdrawsBeforeBattle|EndedInEnemyZOC|TradingExotic|NightBattlesEnabled|HasOffice|FactionHasAllies|LosingMoney|I_LosingMoney|OnAWarFooting|I_IsTutorialEnabled|I_IsPlayerTurn|TrueCondition|IsCapital|GovernorInResidence|BuildingQueueIdleDespiteCash|TrainingQueueIdleDespiteCash|SettlementPopulationMaxedOut|SettlementPopulationTooLow|PercentageOfPopulationInGarrison|GarrisonToPopulationRatio|HealthPercentage|SettlementHasPlague|IsFortGarrisoned|IsSettlementGarrisoned|IsSettlementRioting|I_AdvisorSpeechPlaying|CharacterIsLocal|TargetCharacterIsLocal|SettlementIsLocal|TargetSettlementIsLocal|RegionIsLocal|TargetRegionIsLocal|ArmyIsLocal|ArmyIsGarrison|TargetArmyIsLocal|FactionIsLocal|TargetFactionIsLocal|I_AdvisorVisible|I_AdvancedStatsScrollIsOpen|LocalPlayerHasReinforcements)\b
+      scope: string.condition
+
+    - match: \b(BattleDifficulty|GeneralHPLostRatioinBattle|GeneralNumKillsInBattle|PercentageOfArmyKilled|I_PercentageOfArmyKilled|PercentageEnemyKilled|PercentageBodyguardKilled|PercentageRoutedOffField|NumKilledGenerals|PercentageUnitCategory|NumFriendsInBattle|NumEnemiesInBattle|GeneralFoughtFaction|GeneralFoughtCulture|I_ConflictType|BattleSuccess|BattleOdds|I_BattleAiAttacking|I_BattleAiAttackingSettlement|I_BattleAiDefendingSettlement|I_BattleAiDefendingHill|I_BattleAiDefendingCrossing|I_BattleAiScouting|I_BattleIsRiverBattle|I_BattleIsSiegeBattle|I_BattleIsSallyOutBattle|I_BattleIsFortBattle|I_BattleAttackerNumSiegeEngines|I_BattleAttackerNumArtilleryCanPenetrateWalls|I_BattleDefenderNumNonMissileUnitsOnWalls|I_BattleDefenderNumMissileUnitsOnWalls|I_BattleSettlementTowerDefence|I_BattleSettlementGateDefence|I_BattleSettlementFortificationLevel|BattleBuildingType|I_BattleSettlementGateStrength|I_BattleNumberOfRiverCrossings|BattlePlayerUnitClass|BattleEnemyUnitClass|BattlePlayerUnitCategory|BattleEnemyUnitCategory|BattlePlayerUnitSiegeEngineClass|BattleEnemyUnitSiegeEngineClass|BattlePlayerCurrentFormation|BattleEnemyCurrentFormation|BattlePlayerUnitSpecialAbilitySupported|BattleSelectedPlayerUnitSpecialAbilitySupported|BattleEnemyUnitSpecialAbilitySupported|BattlePlayerMountClass|BattleEnemyMountClass|BattlePlayerUnitMeleeStrength|BattleEnemyUnitMeleeStrength|BattlePlayerUnitMissileStrength|BattleEnemyUnitMissileStrength|BattlePlayerUnitSpecialFormation|BattleEnemyUnitSpecialFormation|BattlePlayerActionStatus|BattleEnemyActionStatus|BattleRangeOfAttack|BattleDirectionOfAttack|I_BattlePlayerArmyPercentageOfUnitClass|I_BattleEnemyArmyPercentageOfUnitClass|I_BattlePlayerArmyPercentageOfUnitCategory|I_BattleEnemyArmyPercentageOfUnitCategory|I_BattlePlayerArmyPercentageOfMountClass|I_BattleEnemyArmyPercentageOfMountClass|I_BattlePlayerArmyPercentageOfClassAndCategory|I_BattleEnemyArmyPercentageOfClassAndCategory|I_BattlePlayerArmyPercentageOfSpecialAbility|I_BattleEnemyArmyPercentageOfSpecialAbility|I_BattlePlayerArmyPercentageCanHide|I_BattleEnemyArmyPercentageCanHide|I_BattlePlayerArmyPercentageCanSwim|I_BattleEnemyArmyPercentageCanSwim|I_BattlePlayerArmyIsAttacker|I_BattlePlayerAllianceOddsInFavour|I_BattlePlayerAllianceOddsAgainst|TotalSiegeWeapons|I_IsUnitMoveFastSet|I_IsUnitMoving|I_IsUnitIdle|I_IsUnitRouting|I_IsUnitUnderFire|I_IsUnitEngaged|I_IsUnitEngagedWithUnit|I_UnitFormation|I_PercentageUnitKilled|I_UnitPercentageAmmoLeft|I_UnitDistanceFromPosition|I_UnitDistanceFromLine|I_UnitDistanceFromUnit|I_UnitInRangeOfUnit|I_UnitDestroyed|I_UnitEnemyUnitInRadius|I_IsUnitGroupMoving|I_IsUnitGroupEngaged|I_IsUnitGroupIdle|I_IsUnitGroupDestroyed|I_PercentageUnitGroupKilled|I_UnitGroupFormation|I_UnitGroupDistanceFromPosition|I_UnitGroupDistanceFromGroup|I_UnitGroupInRangeOfUnit|I_UnitInRangeOfUnitGroup|I_UnitGroupInRangeOfUnitGroup|I_PlayerInRangeOfUnitGroup|I_PlayerInRangeOfUnit|I_UnitTypeSelected|UnitType|I_UnitSelected|I_SpecificUnitsSelected|I_IsCameraZoomingToUnit|I_BattleEnemyArmyPercentageOfMatchingUnits|I_BattleEnemyArmyNumberOfMatchingUnits|I_BattlePlayerArmyPercentageOfMatchingUnits|I_BattlePlayerArmyNumberOfMatchingUnits|Trait|HasAncillary|FatherTrait|FactionLeaderTrait|Attribute|RemainingMPPercentage|I_RemainingMPPercentage|I_CharacterCanMove|AgentType|TrainedAgentType|DisasterType|CultureType|OriginalFactionType|OriginalCultureType|AdviseAction|I_CharacterTypeNearCharacterType|I_CharacterTypeNearTile|I_CharacterNameNearTile|TradingResource|RegionTradingResource|DistanceCapital|DistanceHome|TradingGroup|RegionMerchantCount|PreciousMineCount|IsFromFaction|character_age|FactionType|TargetFactionType|FactionCultureType|TargetFactionCultureType|TrainedUnitCategory|UnitCategory|SenateMissionTimeRemaining|MedianTaxLevel|ModeTaxLevel|I_ModeTaxLevel|MissionSuccessLevel|MissionSucceeded|MissionFactionTargetType|MissionCultureTargetType|DiplomaticStanceFromCharacter|DiplomaticStanceFromFaction|FactionIsAlive|SupportCostsPercentage|Treasury|I_FactionBesieging|I_FactionBesieged|I_NumberOfSettlements|I_NumberOfHeirs|I_FactionNearTile|SettlementsTaken|BattlesFought|BattlesWon|BattlesLost|DefensiveSiegesFought|DefensiveSiegesWon|OffensiveSiegesFought|OffensiveSiegesWon|FactionwideAncillaryExists|IsAlly|IsProtectorate|IsProtector|IsSameSuperfaction|LocalPlayerBattlesFought|Toggled|MajorEventActive|ConstructionItemClicked|RecruitmentItemClicked|CharacterName|ScrollDidOpen|UnitHasRouted|BattleUnitActionStatus|I_AmountOfUnitInSettlement|I_UnitCardSelected|RandomPercent|WorldwideAncillaryExists|I_CompareCounter|TestFaction|LangIs|I_TimerElapsed|I_SoundPlaying|HasResource|SettlementRevoltingFrom|SettlementName|GovernorBuildingExists|SettlementBuildingExists|HomeSettlementBuildingExists|SettlementOrderLevel|SettlementCapabilityLevel|BuildingFinishedByGovernor|SettlementBuildingFinished|GovernorPlugInExists|GovernorPlugInFinished|GovernorTaxLevel|SettlementTaxLevel|GovernorLoyaltyLevel|SettlementLoyaltyLevel|RiotRisk|I_SettlementExists|I_SettlementOwner|I_SettlementOwnerCulture|I_SettlementLevel|AdviseFinancialBuild|AdviseBuild|AdviseRecruit|SettlementAutoManaged|FeralSettlementAutoManaged|I_NumberUnitsInSettlement|I_LocalFaction|I_TurnNumber|I_MapName|I_ThreadCount|I_IsTriggerTrue|IncomingMessageType|I_AdvisorVerbosity|I_CharacterSelected|I_AgentSelected|I_SettlementSelected|ShortcutTriggered|ButtonPressed|ScrollOpened|ScrollClosed|ScrollAdviceRequested|I_AnnotationDisplayed|FeralUIType|MerchantIsAvailableToBuild|SettlementHasDamagedBuilding)\b
+      # <trigger> <multiple arguments>
+      scope: string.condition
+      push:
+        - include: operators
+        - include: bools
+        - include: comments-pop
+        - match: \b\d+(f)?\b
+          scope: constant.numeric
+        - match: '{{valid_variable}}+'
+          scope: variable.language.parameter
+        - match: '\n'
+          pop: true
+
+    - match: \b(restart_timer|set_counter|declare_counter|declare_persistent_counter|declare_timer|retrieve_counter|store_counter|spawn_battle|ai_gta_add_unit_label|ai_gta_plan_set|terminate_prologue|move_to_settlement|snap_to_settlement|restrict_strat_movement|enable_diplomacy_voices|enable_unit_voices|hide_ui_element|show_ui_element|enable_ui_card|disable_ui_card|disable_all_ui_cards|enable_all_ui_cards|disable_agent_hub|enable_agent_hub|point_at_agent_hub|set_marriage_allowed|force_autoresolve_outcome|force_diplomacy|force_agent_succeed|allow_campaign_battles|spawn_character_child|set_battle|restrict_battle_movement|clear_restrict_battle_movement|point_at_diplomacy_offer|point_at_move_retinue|disable_move_retinue_all|enable_move_retinue_all|disable_move_retinue|enable_move_retinue|block_unit_selection|forced_gate_success|strat_selection_unblocker|box_drag_selection|force_settlement_tab|click_drag_move|ui_card_selection_lock|disable_specific_shortcut|set_advice_page|advance_completed_tasks|set_min_formation_width|script_log|ai_active_set|release_unit|hiding_enabled_set|swimming_enabled_set|unit_immediate_place|unit_order_halt|unit_order_move|unit_order_move_to_orientation|unit_order_move_relative|unit_order_attack_unit|unit_order_attack_closest_unit|unit_order_change_formation|unit_order_move_to_missile_range|unit_order_turn|unit_set_morale|unit_unset_morale|unit_set_weapon_upgrade|unit_set_armour_upgrade|unit_set_experience|kill_unit|reduce_unit_strength|unit_set_guard_mode|unit_set_skirmish_mode|unit_set_fire_at_will_mode|unit_set_formation_spacing|unit_taunt|unit_use_special_ability|unit_group_enable_automation|unit_group_automate_defend_position|unit_group_automate_attack|unit_group_immediate_place|unit_group_order_halt|unit_group_order_move_formed|unit_group_order_move_unformed|unit_group_order_relative_move_formed|unit_group_order_relative_move_unformed|unit_group_move_to_missile_range_of_unit|unit_group_move_to_missile_range_of_group|unit_group_order_attack_unit|unit_group_order_attack_group|unit_group_order_change_group_formation|unit_group_order_turn|unit_group_set_morale|unit_group_unset_morale|unit_group_change_unit_formation|unit_group_set_guard_mode|unit_group_set_skirmish_mode|unit_group_set_fire_at_will_mode|unit_group_set_formation_spacing|force_ai_control|finish_battle|move_strat_camera|set_strat_camera_speed|snap_strat_camera|zoom_strat_camera|camera_restrictions_set|camera_event_cuts_active_set|camera_default_mode_set|battle_default_camera|battle_general_camera|set_camera_bookmark|camera_position_at_bookmark|camera_zoom_to_bookmark|camera_position|camera_zoom_to|camera_look_at_position|camera_look_at_unit|camera_track_unit|camera_zoom_to_unit|inhibit_camera_input|provoke_rebellion|move|reposition_character|replenish_action_points|replenish_units|spawn_character|engage_armies|start_benchmark|disable_pause_shortcut_in_campaign|override_superfaction_popularity|set_faction_senate_standing|set_faction_people_standing|holding_while|while|set_ao_visible|set_all_ao_visible|return|while_not|inc_counter|counter_operation|store_counter|retrieve_counter|label_unit|label_location|define_unit_group|undefine_unit_group|remove_unit_from_group|heed_pause|wait|campaign_wait|battle_wait|suspend_during_battle|senate_mission_help_player|senate_mission_assassination|senate_mission_cease_hostilities|senate_mission_declare_war|senate_mission_broker_peace|senate_mission_take_city|set_music_state|play_sound_event|play_sound_flourish|stop_sound_event|point_at_character|point_at_settlement|point_at_strat_position|point_at_strat_position_alt|point_at_message|ui_flash_start|settlement_flash_start|settlement_flash_stop|character_flash_start|character_flash_stop|point_at_location|point_at_unit_pos|point_at_unit_group_pos|point_at_card|point_at_unit_card|e_point_at_unit_card|show_mouse_button_animation|show_movie|disable_ui|enable_ui|set_cards_selectable|rename_settlement_in_region|add_religion|add_hidden_resource|remove_hidden_resource|destroy_building|reveal_tile|play_video|advance_advice_thread|suspend_unscripted_advice|select_character|select_settlement|call_object_shortcut|simulate_mouse_click|select_ui_element|disable_shortcuts|filter_unit_commands|filter_unit_group_commands|filter_unit_selection_commands|filter_settlement_commands|filter_character_commands|filter_all_ui_commands|ui_indicator|ui_indicator_remove|steal_esc_key|highlight_recruitment_item|highlight_construction_item|show_annotations|control_feral_anim)\b
+      # <effect> <args>
+      scope: keyword.command
+      push:
+        - include: operators
+        - include: bools
+        - include: comments-pop
+        - match: \bI_CompareCounter\b
+          scope: string.condition
+        - match: \b\d+(f)?\b
+          scope: constant.numeric
+        - match: '{{valid_variable}}+'
+          scope: variable.language.parameter
+        - match: '\n'
+          pop: true
+
+    # Special cases
+
+    - match: \b(monitor_conditions)\b
+      scope: keyword.command
+      push:
+        - include: operators
+        - include: bools
+        - include: comments-pop
+        - match: \b\d+(f)?\b
+          scope: constant.numeric
+        - match: \b(I_BattleEnemyArmyNumberOfUnits|I_InBattle|WonBattle|I_WonBattle|Routs|Ally_Routs|GeneralFoughtInCombat|IsNightBattle|WasAttacker|I_BattleSettlementWallsBreached|I_BattleSettlementGateDestroyed|BattlePlayerUnitOnWalls|BattleEnemyUnitOnWalls|BattlePlayerUnitCloseFormation|BattleEnemyUnitCloseFormation|BattlePlayerUnitSpecialAbilityActive|BattleEnemyUnitSpecialAbilityActive|BattlePlayerUnitEngaged|BattleEnemyUnitEngaged|BattlePlayerUnitMovingFast|BattleEnemyUnitMovingFast|BattleIsMeleeAttack|I_BattleStarted|I_BattleFinished|I_BattleEnd|I_BattleEndPending|I_MultipleUnitsSelected|LocalPlayerHasManualReinforcements|LocalPlayerHasAIReinforcements|NoActionThisTurn|IsGeneral|IsAdmiral|RemasteredEducation|EndedInSettlement|IsFactionLeader|IsFactionHeir|IsMarried|AtSea|InEnemyLands|InBarbarianLands|InUncivilisedLands|IsBesieging|IsUnderSiege|I_WithdrawsBeforeBattle|EndedInEnemyZOC|TradingExotic|NightBattlesEnabled|HasOffice|FactionHasAllies|LosingMoney|I_LosingMoney|OnAWarFooting|I_IsTutorialEnabled|I_IsPlayerTurn|TrueCondition|IsCapital|GovernorInResidence|BuildingQueueIdleDespiteCash|TrainingQueueIdleDespiteCash|SettlementPopulationMaxedOut|SettlementPopulationTooLow|PercentageOfPopulationInGarrison|GarrisonToPopulationRatio|HealthPercentage|SettlementHasPlague|IsFortGarrisoned|IsSettlementGarrisoned|IsSettlementRioting|I_AdvisorSpeechPlaying|CharacterIsLocal|TargetCharacterIsLocal|SettlementIsLocal|TargetSettlementIsLocal|RegionIsLocal|TargetRegionIsLocal|ArmyIsLocal|ArmyIsGarrison|TargetArmyIsLocal|FactionIsLocal|TargetFactionIsLocal|I_AdvisorVisible|I_AdvancedStatsScrollIsOpen|LocalPlayerHasReinforcements|BattleDifficulty|GeneralHPLostRatioinBattle|GeneralNumKillsInBattle|PercentageOfArmyKilled|I_PercentageOfArmyKilled|PercentageEnemyKilled|PercentageBodyguardKilled|PercentageRoutedOffField|NumKilledGenerals|PercentageUnitCategory|NumFriendsInBattle|NumEnemiesInBattle|GeneralFoughtFaction|GeneralFoughtCulture|I_ConflictType|BattleSuccess|BattleOdds|I_BattleAiAttacking|I_BattleAiAttackingSettlement|I_BattleAiDefendingSettlement|I_BattleAiDefendingHill|I_BattleAiDefendingCrossing|I_BattleAiScouting|I_BattleIsRiverBattle|I_BattleIsSiegeBattle|I_BattleIsSallyOutBattle|I_BattleIsFortBattle|I_BattleAttackerNumSiegeEngines|I_BattleAttackerNumArtilleryCanPenetrateWalls|I_BattleDefenderNumNonMissileUnitsOnWalls|I_BattleDefenderNumMissileUnitsOnWalls|I_BattleSettlementTowerDefence|I_BattleSettlementGateDefence|I_BattleSettlementFortificationLevel|BattleBuildingType|I_BattleSettlementGateStrength|I_BattleNumberOfRiverCrossings|BattlePlayerUnitClass|BattleEnemyUnitClass|BattlePlayerUnitCategory|BattleEnemyUnitCategory|BattlePlayerUnitSiegeEngineClass|BattleEnemyUnitSiegeEngineClass|BattlePlayerCurrentFormation|BattleEnemyCurrentFormation|BattlePlayerUnitSpecialAbilitySupported|BattleSelectedPlayerUnitSpecialAbilitySupported|BattleEnemyUnitSpecialAbilitySupported|BattlePlayerMountClass|BattleEnemyMountClass|BattlePlayerUnitMeleeStrength|BattleEnemyUnitMeleeStrength|BattlePlayerUnitMissileStrength|BattleEnemyUnitMissileStrength|BattlePlayerUnitSpecialFormation|BattleEnemyUnitSpecialFormation|BattlePlayerActionStatus|BattleEnemyActionStatus|BattleRangeOfAttack|BattleDirectionOfAttack|I_BattlePlayerArmyPercentageOfUnitClass|I_BattleEnemyArmyPercentageOfUnitClass|I_BattlePlayerArmyPercentageOfUnitCategory|I_BattleEnemyArmyPercentageOfUnitCategory|I_BattlePlayerArmyPercentageOfMountClass|I_BattleEnemyArmyPercentageOfMountClass|I_BattlePlayerArmyPercentageOfClassAndCategory|I_BattleEnemyArmyPercentageOfClassAndCategory|I_BattlePlayerArmyPercentageOfSpecialAbility|I_BattleEnemyArmyPercentageOfSpecialAbility|I_BattlePlayerArmyPercentageCanHide|I_BattleEnemyArmyPercentageCanHide|I_BattlePlayerArmyPercentageCanSwim|I_BattleEnemyArmyPercentageCanSwim|I_BattlePlayerArmyIsAttacker|I_BattlePlayerAllianceOddsInFavour|I_BattlePlayerAllianceOddsAgainst|TotalSiegeWeapons|I_IsUnitMoveFastSet|I_IsUnitMoving|I_IsUnitIdle|I_IsUnitRouting|I_IsUnitUnderFire|I_IsUnitEngaged|I_IsUnitEngagedWithUnit|I_UnitFormation|I_PercentageUnitKilled|I_UnitPercentageAmmoLeft|I_UnitDistanceFromPosition|I_UnitDistanceFromLine|I_UnitDistanceFromUnit|I_UnitInRangeOfUnit|I_UnitDestroyed|I_UnitEnemyUnitInRadius|I_IsUnitGroupMoving|I_IsUnitGroupEngaged|I_IsUnitGroupIdle|I_IsUnitGroupDestroyed|I_PercentageUnitGroupKilled|I_UnitGroupFormation|I_UnitGroupDistanceFromPosition|I_UnitGroupDistanceFromGroup|I_UnitGroupInRangeOfUnit|I_UnitInRangeOfUnitGroup|I_UnitGroupInRangeOfUnitGroup|I_PlayerInRangeOfUnitGroup|I_PlayerInRangeOfUnit|I_UnitTypeSelected|UnitType|I_UnitSelected|I_SpecificUnitsSelected|I_IsCameraZoomingToUnit|I_BattleEnemyArmyPercentageOfMatchingUnits|I_BattleEnemyArmyNumberOfMatchingUnits|I_BattlePlayerArmyPercentageOfMatchingUnits|I_BattlePlayerArmyNumberOfMatchingUnits|Trait|HasAncillary|FatherTrait|FactionLeaderTrait|Attribute|RemainingMPPercentage|I_RemainingMPPercentage|I_CharacterCanMove|AgentType|TrainedAgentType|DisasterType|CultureType|OriginalFactionType|OriginalCultureType|AdviseAction|I_CharacterTypeNearCharacterType|I_CharacterTypeNearTile|I_CharacterNameNearTile|TradingResource|RegionTradingResource|DistanceCapital|DistanceHome|TradingGroup|RegionMerchantCount|PreciousMineCount|IsFromFaction|character_age|FactionType|TargetFactionType|FactionCultureType|TargetFactionCultureType|TrainedUnitCategory|UnitCategory|SenateMissionTimeRemaining|MedianTaxLevel|ModeTaxLevel|I_ModeTaxLevel|MissionSuccessLevel|MissionSucceeded|MissionFactionTargetType|MissionCultureTargetType|DiplomaticStanceFromCharacter|DiplomaticStanceFromFaction|FactionIsAlive|SupportCostsPercentage|Treasury|I_FactionBesieging|I_FactionBesieged|I_NumberOfSettlements|I_NumberOfHeirs|I_FactionNearTile|SettlementsTaken|BattlesFought|BattlesWon|BattlesLost|DefensiveSiegesFought|DefensiveSiegesWon|OffensiveSiegesFought|OffensiveSiegesWon|FactionwideAncillaryExists|IsAlly|IsProtectorate|IsProtector|IsSameSuperfaction|LocalPlayerBattlesFought|Toggled|MajorEventActive|ConstructionItemClicked|RecruitmentItemClicked|CharacterName|ScrollDidOpen|UnitHasRouted|BattleUnitActionStatus|I_AmountOfUnitInSettlement|I_UnitCardSelected|RandomPercent|WorldwideAncillaryExists|I_CompareCounter|TestFaction|LangIs|I_TimerElapsed|I_SoundPlaying|HasResource|SettlementRevoltingFrom|SettlementName|GovernorBuildingExists|SettlementBuildingExists|HomeSettlementBuildingExists|SettlementOrderLevel|SettlementCapabilityLevel|BuildingFinishedByGovernor|SettlementBuildingFinished|GovernorPlugInExists|GovernorPlugInFinished|GovernorTaxLevel|SettlementTaxLevel|GovernorLoyaltyLevel|SettlementLoyaltyLevel|RiotRisk|I_SettlementExists|I_SettlementOwner|I_SettlementOwnerCulture|I_SettlementLevel|AdviseFinancialBuild|AdviseBuild|AdviseRecruit|SettlementAutoManaged|FeralSettlementAutoManaged|I_NumberUnitsInSettlement|I_LocalFaction|I_TurnNumber|I_MapName|I_ThreadCount|I_IsTriggerTrue|IncomingMessageType|I_AdvisorVerbosity|I_CharacterSelected|I_AgentSelected|I_SettlementSelected|ShortcutTriggered|ButtonPressed|ScrollOpened|ScrollClosed|ScrollAdviceRequested|I_AnnotationDisplayed|FeralUIType|MerchantIsAvailableToBuild|SettlementHasDamagedBuilding)\b
+          scope: string.condition
+        - match: '{{valid_variable}}+'
+          scope: variable.language.parameter
+        - match: '\n'
+          pop: true
+    - match: \b(monitor_event)\b
+      scope: keyword.command
+      push:
+        - match: \b(PreBattle|PreBattleWithdrawal|BattleAiCommenced|BattleDelayPhaseCommenced|BattleDeploymentPhaseCommenced|BattleConflictPhaseCommenced|BattlePlayerUnitAttacksEnemyUnit|BattleEnemyUnitAttacksPlayerUnit|BattlePlayerAttacksSettlementBuilding|BattleEnemyAttacksSettlementBuilding|BattleUnitGoesBerserk|BattlePlayerUnitGoesBerserk|BattleEnemyUnitGoesBerserk|BattleUnitRouts|BattlePlayerUnitRouts|BattleEnemyUnitRouts|BattlePlayerSiegeEngineDestroyed|BattleEnemySiegeEngineDestroyed|PostBattle|BattleArmyRouted|BattleGeneralKilled|BattleGeneralRouted|BattleReinforcementsArrive|BattleSiegeEngineDestroyed|BattleSiegeEngineDocksWall|BattleGatesAttackedByEngine|BattleGatesAttackedByPlayerEngine|BattleGatesAttackedByEnemyEngine|BattleBattleGatesDestroyedByEngine|BattleWallsBreachedByEngine|BattleWallsCaptured|BattleFinished|EnteredCityView|BattleMinimapAction|BattlePlayerUnitSelected|EnterTacticalMode|BattleReinforcementsHack|FactionTurnStart|FactionWarDeclared|HordeFormed|FactionTurnEnd|HireMercenaries|GeneralCaptureResidence|GeneralCaptureWonder|GeneralCaptureSettlement|LeaderDestroyedFaction|Disaster|CharacterDamagedByDisaster|GeneralAssaultsResidence|OfferedForAdoption|LesserGeneralOfferedForAdoption|OfferedForMarriage|BrotherAdopted|BecomesFactionLeader|BecomesFactionHeir|TakeOffice|CeasedFactionLeader|CeasedFactionHeir|LeaveOffice|UngarrisonedFort|LostLegionaryEagle|CapturedLegionaryEagle|RecapturedLegionaryEagle|SenateExposure|QuaestorInvestigationMinor|QuaestorInvestigation|QuaestorInvestigationMajor|PopularSupportForOverthrow|SenateReadyToOutlawFaction|SenateOutlawsFaction|NewTurnStart|ScriptPromptCallback|FactionDestroyed|Birth|CharacterComesOfAge|CharacterMarries|CharacterBecomesAFather|CharacterTurnStart|CharacterTurnEnd|CharacterTurnEndInSettlement|GeneralDevastatesTile|ConstructionItemClicked|RecruitmentItemClicked|RecruitmentPopulated|ConstructionPopulated|AgentListPopulated|MoveRetinuePopulated|MoveRetinuePressed|MoveRetinueAncillarySelected|MoveRetinueAncillaryDeselected|MissionSelected|AgentSelected|ScrollDidOpen|UnitHasRouted|BattleUnitActionStatus|DiplomacyScrollPopulated|ItemDeselected|UnitInfoOpened|AdvisorAudioStopped|SpyMission|ExecutesASpyOnAMission|LeaderOrderedSpyingMission|AssassinationMission|ExecutesAnAssassinOnAMission|LeaderOrderedAssassination|SufferAssassinationAttempt|SabotageMission|LeaderOrderedSabotage|BriberyMission|LeaderOrderedBribery|AcceptBribe|RefuseBribe|Insurrection|DiplomacyMission|LeaderOrderedDiplomacy|LeaderSenateMissionSuccess|LeaderSenateMissionFailed|SettlementTurnStart|SettlementTurnEnd|NewAdmiralCreated|UnitTrained|GovernorUnitTrained|BuildingCompleted|GovernorBuildingCompleted|PlugInCompleted|GovernorPlugInCompleted|AgentCreated|GovernorAgentCreated|BuildingDestroyed|GovernorBuildingDestroyed|CityRiots|GovernorCityRiots|CityRebels|GovernorCityRebels|GovernorThrowGames|GovernorThrowRaces|UngarrisonedSettlement|EnslavePopulation|ExterminatePopulation|CitySacked|CharacterSelected|SettlementSelected|EnemySettlementSelected|MultiTurnMove|CharacterPanelOpen|SettlementPanelOpen|FinancesPanelOpen|FactionSummaryPanelOpen|FamilyTreePanelOpen|DiplomaticStandingPanelOpen|SenateMissionsPanelOpen|SenateOfficesPanelOpen|DiplomacyPanelOpen|PreBattlePanelOpen|RecruitmentPanelOpen|ConstructionPanelOpen|TradePanelOpen|HireMercenariesPanelOpen|NavalAutoResolvePanelOpen|IncomingMessage|MessageOpen|RequestBuildingAdvice|RequestTrainingAdvice|RequestMercenariesAdvice|ButtonPressed|ShortcutTriggered|ScrollOpened|ScrollClosed|AdviceSupressed|ScrollAdviceRequested|PreBattleScrollAdviceRequested|NavalPreBattleScrollAdviceRequested|SettlementScrollAdviceRequested|Idle|AbandonShowMe|ScriptedAdvice|DeclineAutomatedSettlementManagement|EscPressed|GameReloaded|FirstStratUpdates|MovieStopped|SelectionAssistPossible|SettlementButtonPressed|WorldScriptTerminate|CampaignHudShown|ContextPopupInteraction|DiplomacyConstructingOffer|DiplomacyConstructingCounterOffer|DiplomacyOpponentPresentsOffer|DiplomacyOpponentPresentsCounterOffer|FactionSummary|FactionSenate|FactionSenatePolicy|FactionSenateMissions|FactionSenateOfficials|FactionSenateFloor|FactionFactions|FactionDetails|FactionFamilyTree|FactionRankings|FactionLists|SettlementCharacter|SettlementTrade|SettlementOverview|SpySelected|DiplomatSelected|AssassinSelected|FleetSelected|CampaignMapGesture|CampaignDoingBadly|BattleMapGesture|HideBattleUI|FeralNewsVisible|AgentHubOpened|MoveRetinueOpened|OwnFactionDetailsOpened|DiplomaticStandingShown|FactionFinancesShown|FamilyTreeShown|SendAgentPanel|SettlementDetailsShown|CharacterInfoScreen|FriendlyCharacterSelected|EnemyCharacterSelected|FriendlySettlementSelected|EnemySettlementSelected|MapOverlayOpened|SiegeDetailsShown|PreBattleScreen|TacticalMapShown|PostBattleScreen|UnitsGrouped|EnteredBattle|AdvisorOpened|FormationTypesShown|MerchantSelected|NavalCombatStarted|MergeArmiesOpened|RoutesBlockaded|ElectionResults|BattleToggleMenu|AmbushMode|NewsTabClosed|NewsTabOpened|BattleNewsTabOpened|QuickListsOpened|EmbargoIsAvailable|RebelCharacterSelected|HighTaxesCauseDisorder|FailedToEndTurn)\b
+          scope: storage.type.event
+          pop: true
+        - match: '\n'
+          pop: true
+
+    - match: \b(?i)(for_each)(?-i)\b
+      # special matching for for_each statement
+      scope: keyword.command
+      push:
+        - match: '{{valid_variable}}'
+          scope: variable.language.parameter
+          push:
+            - match: in
+              scope: keyword
+              push:
+                - match: '{{valid_variable}}'
+                  scope: variable.language.parameter
+                  push:
+                    - match: \s?\"
+                      push:
+                        - match: '{{valid_variable}}'
+                          scope: string
+                          pop: 5
+                    - match: '{{valid_variable}}'
+                      scope: string
+                      pop: 4
+                    - match: '\n'
+                      pop: 4
+                - match: '\n'
+                  pop: 3
+
+    - match: \b(include_script)\b
+      scope: keyword.command
+      push:
+        - match: .*
+          scope: variable.language.parameter
+          pop: true
+        - match: '\n'
+          pop: true
+
+    - match: \bmessage_prompt\b
+      scope: keyword.command
+      push:
+        - include: message-prompt-includes
+        - include: comments
+        - match: '}'
+          scope: keyword
+          pop: true
+
+    - match: \bspawn_army\b
+      scope: keyword.command
+      push:
+        - include: spawn-army-includes
+        - include: comments
+        - match: \bend\b
+          scope: keyword
+          pop: true
+
+    - match: \b(console_command)\b
+      # <effect> <command_name> <arg1> <arg2> <arg3> <arg4>
+      scope: keyword.command
+      push:
+        - match: \b(add_expenditure|add_income|add_money|add_population|add_soldiers|all_ai|auto_win|become_protector|bestbuy|capture_settlement|change_character_faction|character_reset|check_persistent_var|control|crash|create_assassin|create_building|create_diplomat|create_merchant|create_spy|create_unit|date|destroy_unit|diplomacy_mission|diplomatic_stance|disable_ai|dump_diplo_stats|dump_proposition_stats|force_battle_defeat|force_battle_victory|force_diplomacy|gesture_para|give_ancillary|give_everything|give_trait|give_trait_points|go_to_capital|go_to_char|go_to_pos|go_to_sett|halt_ai|imgui_set|invulnerable_general|jericho|kill_army|kill_character|kill_faction|list_ancillaries|list_characters|list_traits|list_units|move_character|mp|oliphaunt|paths_per_tick|process_cq|process_rq|puppify_my_love|reseed_random|run_ai|season|set_building_health|set_fow|set_heir|set_leader|set_move_points|show_cursorstat|show_ui|showmethemoney|surrender_regions|swap_unit|test_message|test_victory_scroll|toggle_automanage|toggle_fow|toggle_path_draw|toggle_perfect_spy|toggle_restrictcam|toggle_terrain|victory|vulnerable_general|zoom)\b
+          scope: entity.name.console.command
+          push:
+            - include: operators
+            - match: \d+
+              scope: constant.numeric
+            - match: '{{valid_variable}}+'
+              scope: variable.language.parameter
+            - match: '\n'
+              pop: 2
+        - match: '\n'
+          pop: true
+
+  message-prompt-includes:
+    - match: \b(title|body|image)\b
+      scope: constant.numeric
+      push:
+        - match: '{{valid_variable}}'
+          scope: variable.language.parameter
+          pop: true
+        - match: '\n'
+          pop: true
+    - match: \b(flag_counter|result_counter)\b
+      scope: keyword
+      push:
+        - match: '{{valid_variable}}'
+          scope: variable.language.parameter
+          pop: true
+        - match: '\n'
+          pop: true
+
+  spawn-army-includes:
+    - match: \b(faction)\b
+      scope: constant.numeric
+      push:
+        - match: '{{valid_variable}}'
+          scope: variable.language.parameter
+          pop: true
+        - match: '\n'
+          pop: true
+    - match: \b(character|unit)\b
+      scope: keyword
+      push:
+        - match: '{{valid_variable}}'
+          scope: entity.name
+          push:
+            - match: \b\d+(f)?\b
+              scope: constant.numeric
+            - match: '{{valid_variable}}'
+              scope: variable.language.parameter
+            - match: '\n'
+              pop: 2
+        - match: '\n'
+          pop: true
+
+  string:
+    - match: \b(horde unit reduction per horde|horde unit disband per settlement)\b
+      scope: storage.type
+    - match: \b(spy.tga|assassin.tga|diplomat.tga|merchant.tga|admiral.tga)\b
+      scope: white.text
+    - match: \b(horde units|random voice indexes|intro|victory|defeat|family tree|colours|movies|strat symbol model|strat rebel symbol model|loading screen icon|logos|tags|fgroup_fun_temple|namelists|spy|assassin|diplomat|merchant|admiral|aerial map base|base model|card path|village|town|large_town|city|large_city|huge_city)\b
+      scope: constant.numeric
+    - match: \b(battle personalities|EAX parameters|hashes|global parameters|factions|info card|unit card|fort|watchtower|agents|settlement icons|cultures|unrest factors|settlement upgrade levels)\b
+      scope: entity.name
+    - match: \b(min horde units|max horde units|population to horde units|min named characters|max horde unit army percent|volume cutoff|priority floor|weather pitch offset|use unit idle probability|use unit ambient probability|use unit retreat probability|unit idle probability scale|unit ambient probability scale|unit retreat probability scale|unit under attack timeout|ducking on|unit collide threshold|unit warhorns timeout|ducking fade in|ducking fade out|voice ducking amount|pause ducking amount|group noise cull dist|unit move start delay|unit sound merge distance|music fade in|music fade out|cull group noise|doppler factor|music retrigger|battle rolloff factor|strat rolloff factor|culture hash|faction hash|climate hash|allow reproduction|available in custom battles|prefer naval invasions|background|font|selected line|unselected line|primary|secondary|logo index|rebel logo index|standard index|rebel standard index|recruitment cost|population cost|recruitment points|cost|base|upgrade|min pop|max pop|squalour pop|ai assist under settlements|civilised|squalor rate|overcrowding rate|capital distance multiplier)\b
+      scope: storage.type
+    - match: \b(default religion|default battle ai personality|culture|ethnicity|description|string|portrait mapping|max settlement level)\b
+      scope: string
+    - match: '\n'
+      pop: true
+    - match: '"'
+      pop: true

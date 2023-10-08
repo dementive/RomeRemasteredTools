@@ -1,0 +1,3546 @@
+{
+	"scope": "text.rome",
+	"completions":
+	[
+		{
+			"trigger": "move_to_settlement",
+			"contents": "move_to_settlement",
+			"details": "Moves the camera position to a settlement",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "snap_to_settlement",
+			"contents": "snap_to_settlement",
+			"details": "Snaps camera position to a settlement",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "clear_restrict_strat_movement",
+			"contents": "clear_restrict_strat_movement",
+			"details": "Clear the restricted movement",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "restrict_strat_movement",
+			"contents": "restrict_strat_movement",
+			"details": "Restricts a given faction, so they could only move to where specified",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "disable_diplomacy_ui",
+			"contents": "disable_diplomacy_ui",
+			"details": "disable all diplomacy ui elements",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "enable_diplomacy_voices",
+			"contents": "enable_diplomacy_voices",
+			"details": "enable or disable all diplomacy barks",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "enable_unit_voices",
+			"contents": "enable_unit_voices",
+			"details": "enable or disable all unit command lines",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "hide_ui_element",
+			"contents": "hide_ui_element",
+			"details": "Hides a given UI element",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "show_ui_element",
+			"contents": "show_ui_element",
+			"details": "Shows a given UI element",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "enable_ui_card",
+			"contents": "enable_ui_card",
+			"details": "Enables a given UI card",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "disable_ui_card",
+			"contents": "disable_ui_card",
+			"details": "Disables a given UI card",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "disable_all_ui_cards",
+			"contents": "disable_all_ui_cards",
+			"details": "Disable all ui cards of the given type",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "enable_all_ui_cards",
+			"contents": "enable_all_ui_cards",
+			"details": "Enables all ui cards of the given type",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "disable_agent_hub_all",
+			"contents": "disable_agent_hub_all",
+			"details": "Disables all of the given targets from being clickable",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "enable_agent_hub_all",
+			"contents": "enable_agent_hub_all",
+			"details": "Enable all of the targets from being clickable",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "disable_agent_hub",
+			"contents": "disable_agent_hub",
+			"details": "Disable an agent with a given name",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "enable_agent_hub",
+			"contents": "enable_agent_hub",
+			"details": "Enable an agent with a given name",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "point_at_agent_hub",
+			"contents": "point_at_agent_hub",
+			"details": "Points at the agent hub element",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "set_marriage_allowed",
+			"contents": "set_marriage_allowed",
+			"details": "Controls if the automatic marriage proposals are triggered at the start of the round",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "trigger_marriage_proposal",
+			"contents": "trigger_marriage_proposal",
+			"details": "Triggers a marriage proposal for a player.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "deselect_current_selection",
+			"contents": "deselect_current_selection",
+			"details": "Deselect the currently selected settlement, unit, etc.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "force_autoresolve_outcome",
+			"contents": "force_autoresolve_outcome",
+			"details": "Forces the outcome for the given faction",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "force_diplomacy",
+			"contents": "force_diplomacy",
+			"details": "Forces the ai to either accept or reject diplomacy requests",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "create_mercenary_pool",
+			"contents": "create_mercenary_pool",
+			"details": "",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "force_agent_succeed",
+			"contents": "force_agent_succeed",
+			"details": "Ensures that the chances of agent actions are as normal or 100%",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "allow_campaign_battles",
+			"contents": "allow_campaign_battles",
+			"details": "Allows battles to be started/not started from campaign UI. This is a workaround for how we start the tutorial battles",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "spawn_character_child",
+			"contents": "spawn_character_child",
+			"details": "Spawns a new character with given parameters and a given father",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "stop_point_at_indicator",
+			"contents": "stop_point_at_indicator",
+			"details": "",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "stop_all_point_at_indicators",
+			"contents": "stop_all_point_at_indicators",
+			"details": "",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "set_battle",
+			"contents": "set_battle",
+			"details": "",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "restrict_battle_movement",
+			"contents": "restrict_battle_movement",
+			"details": "",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "clear_restrict_battle_movement",
+			"contents": "clear_restrict_battle_movement",
+			"details": "",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "point_at_diplomacy_offer",
+			"contents": "point_at_diplomacy_offer",
+			"details": "Points at the offer in the diplomacy panel",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "point_at_move_retinue",
+			"contents": "point_at_move_retinue",
+			"details": "Points at the target in move retinue",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "disable_move_retinue_all",
+			"contents": "disable_move_retinue_all",
+			"details": "Disables all of the given targets from being clickable",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "enable_move_retinue_all",
+			"contents": "enable_move_retinue_all",
+			"details": "Enable all of the given targets from being clickable",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "disable_move_retinue",
+			"contents": "disable_move_retinue",
+			"details": "Disable a specified ancillary",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "enable_move_retinue",
+			"contents": "enable_move_retinue",
+			"details": "Enable a specified ancillary",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "block_unit_selection",
+			"contents": "block_unit_selection",
+			"details": "Enable/disable ability to select units.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "forced_gate_success",
+			"contents": "forced_gate_success",
+			"details": "Sets the gate opening chance by a spy to a certain value",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "strat_selection_unblocker",
+			"contents": "strat_selection_unblocker",
+			"details": "Adds the given character/settlement to a list of selectable items on the strat map. All units are unblocked by default until the first is added with this command - then they're all blocked.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "clear_strat_selection_unblocker",
+			"contents": "clear_strat_selection_unblocker",
+			"details": "Clears the list of selectable items on the strat map, making everything selectable.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "open_stop_tutorial_confirmation_dialog",
+			"contents": "open_stop_tutorial_confirmation_dialog",
+			"details": "Open a confirmation dialog that allows the user to stop the tutorial.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "set_label",
+			"contents": "set_label",
+			"details": "Set a label that can be jumped to with a Goto statement",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "goto",
+			"contents": "goto",
+			"details": "jump to a place in the script marked by a label",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "force_deselect_trigger",
+			"contents": "force_deselect_trigger",
+			"details": "Triggers the Item Deselected event trigger.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "box_drag_selection",
+			"contents": "box_drag_selection",
+			"details": "Switches the ability to use the box drag selection on units in battles.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "force_settlement_tab",
+			"contents": "force_settlement_tab",
+			"details": "Forces the tab of the settlement ui to change to the specified one.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "click_drag_move",
+			"contents": "click_drag_move",
+			"details": "Switches the ability to use the right-click and drag movement on units in battles.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "toggle_minimap",
+			"contents": "toggle_minimap",
+			"details": "Toggles the top-right map in the strat view.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "close_news_panel",
+			"contents": "close_news_panel",
+			"details": "instantly closes the news panel",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "ui_card_selection_lock",
+			"contents": "ui_card_selection_lock",
+			"details": "Switches the ability to select/deselect unit cards.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "disable_specific_shortcut",
+			"contents": "disable_specific_shortcut",
+			"details": "This will disable/enable a given keyboard shortcut for a given element (or all elements if element_id is omitted), except the key defined as being the 'quit' key (ESC by default).  See data/descr_shortcuts.txt for the element_ids that are useable",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "set_advice_page",
+			"contents": "set_advice_page",
+			"details": "Sets the page number of a type D advice panel. Page numbers start at 1.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "advance_completed_tasks",
+			"contents": "advance_completed_tasks",
+			"details": "Advances the right tutorial panel list of completed tasks to the specified task.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "set_min_formation_width",
+			"contents": "set_min_formation_width",
+			"details": "Sets the minimum width that the player can have their units at.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "script_log",
+			"contents": "script_log",
+			"details": "logs a message to the console/stdout (not the in-game romeshell)",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "ai_active_set",
+			"contents": "ai_active_set",
+			"details": "Turns AI on or off",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "release_unit",
+			"contents": "release_unit",
+			"details": "Unlabels the specified unit and releases it back to player or AI control",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "hiding_enabled_set",
+			"contents": "hiding_enabled_set",
+			"details": "Enables or disables unit hiding for all units",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "swimming_enabled_set",
+			"contents": "swimming_enabled_set",
+			"details": "Enables or disables swimming for all units",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "pause_battle",
+			"contents": "pause_battle",
+			"details": "pauses the battle",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_immediate_place",
+			"contents": "unit_immediate_place",
+			"details": "Immediately positions the unit at the given location",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_order_halt",
+			"contents": "unit_order_halt",
+			"details": "orders the specified unit stop it's orders",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_order_move",
+			"contents": "unit_order_move",
+			"details": "orders the specified unit to move to the specified position",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_order_move_to_orientation",
+			"contents": "unit_order_move_to_orientation",
+			"details": "orders the specified unit to move to the specified position with a specified rotation and orientation",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_order_move_relative",
+			"contents": "unit_order_move_relative",
+			"details": "orders the specified unit to move to the specified position",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_order_attack_unit",
+			"contents": "unit_order_attack_unit",
+			"details": "Orders one unit to attack another",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_order_attack_closest_unit",
+			"contents": "unit_order_attack_closest_unit",
+			"details": "Searches an arc in front of the unit, and attacks the closest enemy found",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_order_change_formation",
+			"contents": "unit_order_change_formation",
+			"details": "changes the specified unit's formation",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_order_move_to_missile_range",
+			"contents": "unit_order_move_to_missile_range",
+			"details": "orders the attacker to move into missile range of the target",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_order_turn",
+			"contents": "unit_order_turn",
+			"details": "order the unit to turn to an absolute angle or by an angle relative to it's current rotation",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_set_morale",
+			"contents": "unit_set_morale",
+			"details": "sets and locks the unit's morale level",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_unset_morale",
+			"contents": "unit_unset_morale",
+			"details": "unlocks the unit's morale, the game will retake control and update the morale normally",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_set_weapon_upgrade",
+			"contents": "unit_set_weapon_upgrade",
+			"details": "sets the unit's weapon upgrade (0-3)",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_set_armour_upgrade",
+			"contents": "unit_set_armour_upgrade",
+			"details": "sets the unit's armour upgrade (0-3)",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_set_experience",
+			"contents": "unit_set_experience",
+			"details": "sets the specified unit's experience level (0-9)",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "kill_unit",
+			"contents": "kill_unit",
+			"details": "Completely wipes out the specified unit",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "reduce_unit_strength",
+			"contents": "reduce_unit_strength",
+			"details": "Kills enough men to reduce a unit to the specifies percentage of it's original strangth",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_set_guard_mode",
+			"contents": "unit_set_guard_mode",
+			"details": "Sets the guard melee state for the specified unit",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_set_skirmish_mode",
+			"contents": "unit_set_skirmish_mode",
+			"details": "Sets the skirmish melee state for the specified unit",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_set_fire_at_will_mode",
+			"contents": "unit_set_fire_at_will_mode",
+			"details": "Sets the fire-at-will melee state for the specified unit",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_set_formation_spacing",
+			"contents": "unit_set_formation_spacing",
+			"details": "Sets the specified unit's formation spacing to loose or tight",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_taunt",
+			"contents": "unit_taunt",
+			"details": "Makes the unit taunt",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_use_special_ability",
+			"contents": "unit_use_special_ability",
+			"details": "Makes the unit perform their special ability",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_enable_automation",
+			"contents": "unit_group_enable_automation",
+			"details": "Sets or unsets unit group automation",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_automate_defend_position",
+			"contents": "unit_group_automate_defend_position",
+			"details": "Instructs an automated unit group to defend position",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_automate_attack",
+			"contents": "unit_group_automate_attack",
+			"details": "Instructs an automated unit group to attack a specified enemy unit",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_immediate_place",
+			"contents": "unit_group_immediate_place",
+			"details": "orders the unit group to move to the specified location",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_order_halt",
+			"contents": "unit_group_order_halt",
+			"details": "orders the unit group to stop it's orders",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_order_move_formed",
+			"contents": "unit_group_order_move_formed",
+			"details": "orders the unit group to move to the specified location",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_order_move_unformed",
+			"contents": "unit_group_order_move_unformed",
+			"details": "orders the unit group to move to the specified location",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_order_relative_move_formed",
+			"contents": "unit_group_order_relative_move_formed",
+			"details": "orders the unit group to move to the specified location",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_order_relative_move_unformed",
+			"contents": "unit_group_order_relative_move_unformed",
+			"details": "orders the unit group to move to the specified location",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_move_to_missile_range_of_unit",
+			"contents": "unit_group_move_to_missile_range_of_unit",
+			"details": "move the unit group so that at least one unit is in range of the target unit",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_move_to_missile_range_of_group",
+			"contents": "unit_group_move_to_missile_range_of_group",
+			"details": "move the unit group so that at least one unit is in range of at least one unit in the target group",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_order_attack_unit",
+			"contents": "unit_group_order_attack_unit",
+			"details": "order the unit group to attack the target unit",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_order_attack_group",
+			"contents": "unit_group_order_attack_group",
+			"details": "orders the unit group to attack the target group",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_order_change_group_formation",
+			"contents": "unit_group_order_change_group_formation",
+			"details": "sets a group formation from descr_formations.txt",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_order_turn",
+			"contents": "unit_group_order_turn",
+			"details": "rotates the unit group to an angle or by a number of degrees relative to it's current angle (see unit_order_turn)",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_set_morale",
+			"contents": "unit_group_set_morale",
+			"details": "sets and locks the morale level for each unit in the group",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_unset_morale",
+			"contents": "unit_group_unset_morale",
+			"details": "unlocks the units' morale, the game will retake control and update the morale normally",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_change_unit_formation",
+			"contents": "unit_group_change_unit_formation",
+			"details": "changes the formation of each unit in the specified unit group",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_set_guard_mode",
+			"contents": "unit_group_set_guard_mode",
+			"details": "Sets the guard melee state for all units in the specified group",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_set_skirmish_mode",
+			"contents": "unit_group_set_skirmish_mode",
+			"details": "Sets the skirmish melee state for all units in the specified group",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_set_fire_at_will_mode",
+			"contents": "unit_group_set_fire_at_will_mode",
+			"details": "Sets the guard melee state for all units in the specified group",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "unit_group_set_formation_spacing",
+			"contents": "unit_group_set_formation_spacing",
+			"details": "Sets the formation spacing, for each unit in the group, to loose or tight",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "force_ai_control",
+			"contents": "force_ai_control",
+			"details": "Gives all armies to the AI",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "finish_battle",
+			"contents": "finish_battle",
+			"details": "Completes the 'Finished' battle phase",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "move_strat_camera",
+			"contents": "move_strat_camera",
+			"details": "Move the camera smoothly to the position",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "set_strat_camera_speed",
+			"contents": "set_strat_camera_speed",
+			"details": "Sets the movement speed of the camera",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "snap_strat_camera",
+			"contents": "snap_strat_camera",
+			"details": "Move the camera immediately to the position",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "zoom_strat_camera",
+			"contents": "zoom_strat_camera",
+			"details": "Change the zoom of the camera (0 right up close, 1 far out), clamped at a hard-coded lower bound",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "camera_restrictions_set",
+			"contents": "camera_restrictions_set",
+			"details": "sets or unsets the restricted camera",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "camera_event_cuts_active_set",
+			"contents": "camera_event_cuts_active_set",
+			"details": "activates and deactivates the event cut camera",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "camera_default_mode_set",
+			"contents": "camera_default_mode_set",
+			"details": "Sets the default camera to TotalWar Camera (tw), RTS Camera (rts), General's Camera (general) or whichever mode the player has in his preferences (user_pref)",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "battle_default_camera",
+			"contents": "battle_default_camera",
+			"details": "Sets the default camera",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "battle_general_camera",
+			"contents": "battle_general_camera",
+			"details": "Sets the general's camera",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "set_camera_bookmark",
+			"contents": "set_camera_bookmark",
+			"details": "Sets a camera bookmark to position and target specified, which can later be recalled with UseCameraBookmark",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "camera_position_at_bookmark",
+			"contents": "camera_position_at_bookmark",
+			"details": "If the bookmark has been set (either in game, or with Set_Camera_Bookmark), then this will move the camera to the position and target specified by the bookmark",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "camera_zoom_to_bookmark",
+			"contents": "camera_zoom_to_bookmark",
+			"details": "If the bookmark has been set (either in game, or with set_camera_bookmark), then this will move the camera to the position and target specified by the bookmark",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "camera_position",
+			"contents": "camera_position",
+			"details": "Immediately places the camera at the specified position",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "camera_zoom_to",
+			"contents": "camera_zoom_to",
+			"details": "Zoom camera	to position, and look at target",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "camera_look_at_position",
+			"contents": "camera_look_at_position",
+			"details": "camera turns to look at a position on the battlefield, but doesn't move",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "camera_look_at_unit",
+			"contents": "camera_look_at_unit",
+			"details": "turns the camera to look at the unit without moving",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "camera_track_unit",
+			"contents": "camera_track_unit",
+			"details": "camera tracks the specified unit, direction can be a number in degrees or an identifier front, back, left or right",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "camera_zoom_to_unit",
+			"contents": "camera_zoom_to_unit",
+			"details": "zoom the camera to the soecified unit",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "e_camera_zoom_to_unit",
+			"contents": "e_camera_zoom_to_unit",
+			"details": "zoom the camera to the unit specified by the event",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "inhibit_camera_input",
+			"contents": "inhibit_camera_input",
+			"details": "Stop the user affecting the camera position, either through the keyboard or mouse movement",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "declare_prologue",
+			"contents": "declare_prologue",
+			"details": "enforce prologue considerations upon the world, e.g. no general death during auto-resolve",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "terminate_prologue",
+			"contents": "terminate_prologue",
+			"details": "withdraw prologue considerations upon the world, e.g. no general death during auto-resolve",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "provoke_rebellion",
+			"contents": "provoke_rebellion",
+			"details": "Start a rebellion in the named settlement at the start of the next turn",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "move",
+			"contents": "move",
+			"details": "Move the named character to the location specified",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "reposition_character",
+			"contents": "reposition_character",
+			"details": "Snap the character to a position",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "replenish_action_points",
+			"contents": "replenish_action_points",
+			"details": "replenish the character's action points",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "replenish_units",
+			"contents": "replenish_units",
+			"details": "replenish all the units to full numbers for the army",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "spawn_character",
+			"contents": "spawn_character",
+			"details": "create an army at a particular location",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "spawn_army",
+			"contents": "spawn_army",
+			"details": "create an army at a particular location",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "engage_armies",
+			"contents": "engage_armies",
+			"details": "Instruct the attacking general to attack the defending general",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "disable_popups",
+			"contents": "disable_popups",
+			"details": "Disable the popup style help in the prologue",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "start_benchmark",
+			"contents": "start_benchmark",
+			"details": "Starts logging frametime benchmark data",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "end_benchmark",
+			"contents": "end_benchmark",
+			"details": "Ends a benchmark run",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "disable_pause_shortcut_in_campaign",
+			"contents": "disable_pause_shortcut_in_campaign",
+			"details": "Stop esc from bringing up Pause menu while on campaign map",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "override_superfaction_popularity",
+			"contents": "override_superfaction_popularity",
+			"details": "Disable normal superfaction popularity processing so that it can be controlled by a script",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "set_faction_senate_standing",
+			"contents": "set_faction_senate_standing",
+			"details": "Set the senate standing of a given faction",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "set_faction_people_standing",
+			"contents": "set_faction_people_standing",
+			"details": "Set the people standing of a given faction",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "message_prompt",
+			"contents": "message_prompt",
+			"details": "Creates a new news message with a simple yes/no prompt. Will set flag_counter to 1 and result_counter to 1 or 0 depending on player selection.<br>Using the same counter for both the flag and result will set it to the result only.<br>Use ScriptPromptCallback event to detect responses",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "script",
+			"contents": "script",
+			"details": "start a script",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "include_script",
+			"contents": "include_script",
+			"details": "include a script file into this one, allowing large scripts to be broken into smaller ones",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "terminate_script",
+			"contents": "terminate_script",
+			"details": "terminate a script",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "break",
+			"contents": "break",
+			"details": "immediately exit the current scope",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "spawn_battle",
+			"contents": "spawn_battle",
+			"details": "Start the battle contained in the named folder, relative to the maps folder.  The next command in the script should be prepare_for_battle.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "if",
+			"contents": "if",
+			"details": "conditional execution",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "if_not",
+			"contents": "if_not",
+			"details": "conditional execution",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "holding_while",
+			"contents": "holding_while",
+			"details": "start a while loop and don't exit or process any other commands outside the loop until the condition isn't met",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "while",
+			"contents": "while",
+			"details": "start a while loop",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "for_each",
+			"contents": "for_each",
+			"details": "iterate through all instances of a certain type within a given scope (note that unit iterator will always be fed through as player unit)",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "set_ao_visible",
+			"contents": "set_ao_visible",
+			"details": "set visibility of all ambient objects with the given tag in the specified region (if no region name specified, taken from context)",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "set_all_ao_visible",
+			"contents": "set_all_ao_visible",
+			"details": "set visibility of all ambient objects with the given tag throughout the entire map",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "return",
+			"contents": "return",
+			"details": "return a value from the script and terminate, used for faction spawn scripts",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "while_not",
+			"contents": "while_not",
+			"details": "start a while loop",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "monitor_conditions",
+			"contents": "monitor_conditions",
+			"details": "start a monitor loop when conditions are of a particular value",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "monitor_event",
+			"contents": "monitor_event",
+			"details": "start a monitor loop in response to an event",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "terminate_monitor",
+			"contents": "terminate_monitor",
+			"details": "terminate a monitor loop",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "console_command",
+			"contents": "console_command",
+			"details": "execute a command through the console",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "declare_counter",
+			"contents": "declare_counter",
+			"details": "declare a counter and give it an initial value of zero",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "declare_persistent_counter",
+			"contents": "declare_persistent_counter",
+			"details": "declare a counter that will be persistent between saves and give it an initial value of zero, assuming it hasn't been defined in a previous save",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "inc_counter",
+			"contents": "inc_counter",
+			"details": "change a counter by a particular amount",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "set_counter",
+			"contents": "set_counter",
+			"details": "change a counter to a particular value",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "counter_operation",
+			"contents": "counter_operation",
+			"details": "Sets the result counter to the result of the expression. Valid operations are *, /, +, -",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "store_counter",
+			"contents": "store_counter",
+			"details": "Stores a counter in the given location type in scope, with the label specified",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "retrieve_counter",
+			"contents": "retrieve_counter",
+			"details": "Extacts a counter with the given label from the location type in scope, and loads it into the supplied counter",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "prepare_for_battle",
+			"contents": "prepare_for_battle",
+			"details": "Clear all the unit labels, location labels &c.  This is separate from the spawn_battle command in case you are scripting a historical battle.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "declare_show_me",
+			"contents": "declare_show_me",
+			"details": "Flag the script as a show me script - required for the AbandonShowMe event",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "label_unit",
+			"contents": "label_unit",
+			"details": "Label a particular unit",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "label_location",
+			"contents": "label_location",
+			"details": "Label a particular location",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "define_unit_group",
+			"contents": "define_unit_group",
+			"details": "creates a unit group containing the specified units",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "undefine_unit_group",
+			"contents": "undefine_unit_group",
+			"details": "removes the specified unit group",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "remove_unit_from_group",
+			"contents": "remove_unit_from_group",
+			"details": "removes the unit from the group, if it is already a member",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "declare_timer",
+			"contents": "declare_timer",
+			"details": "declare a script timer",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "restart_timer",
+			"contents": "restart_timer",
+			"details": "restart the script timer",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "heed_pause",
+			"contents": "heed_pause",
+			"details": "turn on/off the game pause acknowledgement - off by default",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "wait",
+			"contents": "wait",
+			"details": "Wait for the specified time before proceeding to the next script command.  The timer is based on the display update, so pausing the game does not pause the timer unless heed_pause is declared.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "campaign_wait",
+			"contents": "campaign_wait",
+			"details": "Wait for the specified time before proceeding to the next script command.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "battle_wait",
+			"contents": "battle_wait",
+			"details": "Wait for the specified time before proceeding to the next script command.  The timer is based on the battle update, so pausing and fast forwarding will affect the timer.",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "suspend_during_battle",
+			"contents": "suspend_during_battle",
+			"details": "suspend the script during battles - off by default",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "senate_mission_help_player",
+			"contents": "senate_mission_help_player",
+			"details": "Issue a senate mission to gift the player with the payback - receipt and notification takes place at the start of the next turn",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "senate_mission_assassination",
+			"contents": "senate_mission_assassination",
+			"details": "Issue a senate mission to assassinate the character named in the parameter list for a reward of the payback",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "senate_mission_cease_hostilities",
+			"contents": "senate_mission_cease_hostilities",
+			"details": "Issue a senate mission to instruct the player to cease hostilities against the named faction for a reward of the payback",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "senate_mission_declare_war",
+			"contents": "senate_mission_declare_war",
+			"details": "Issue a senate mission to instruct the player to prosecute a war against the named faction for a reward of the payback",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "senate_mission_broker_peace",
+			"contents": "senate_mission_broker_peace",
+			"details": "Issue a senate mission to instruct the player to prosecute a war against the named faction for a reward of the payback",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "senate_mission_take_city",
+			"contents": "senate_mission_take_city",
+			"details": "Issue a senate mission to take the settlement named in the parameter list for a reward of the payback",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "set_music_state",
+			"contents": "set_music_state",
+			"details": "Sets the music state of the game. Battle states only work if in battle",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "release_music_control",
+			"contents": "release_music_control",
+			"details": "Releases script control over the music, letting it play and transition normally",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "play_sound_event",
+			"contents": "play_sound_event",
+			"details": "Plays sound event",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "play_sound_flourish",
+			"contents": "play_sound_flourish",
+			"details": "Plays a sound over the top of any music, with or without a fade",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "stop_sound_event",
+			"contents": "stop_sound_event",
+			"details": "Stops tagged sound events",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "point_at_character",
+			"contents": "point_at_character",
+			"details": "point at the character",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "point_at_settlement",
+			"contents": "point_at_settlement",
+			"details": "point at the settlement",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "e_point_at_settlement",
+			"contents": "e_point_at_settlement",
+			"details": "point at a settlement specified in a piece of advice",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "point_at_strat_position",
+			"contents": "point_at_strat_position",
+			"details": "point at the position",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "point_at_strat_position_alt",
+			"contents": "point_at_strat_position_alt",
+			"details": "separate point_at_strat with different properties",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "point_at_message",
+			"contents": "point_at_message",
+			"details": "point at the message",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "ui_flash_start",
+			"contents": "ui_flash_start",
+			"details": "move the highlight pointer to the named element",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "ui_flash_stop",
+			"contents": "ui_flash_stop",
+			"details": "clear the tutorial pointer",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "settlement_flash_start",
+			"contents": "settlement_flash_start",
+			"details": "highlight the tile",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "settlement_flash_stop",
+			"contents": "settlement_flash_stop",
+			"details": "stop highlighting the tile",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "character_flash_start",
+			"contents": "character_flash_start",
+			"details": "flash the tile under the character",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "character_flash_stop",
+			"contents": "character_flash_stop",
+			"details": "stop flashing the tile under the character",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "point_at_location",
+			"contents": "point_at_location",
+			"details": "Indicates a position on the battle map",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "point_at_unit_pos",
+			"contents": "point_at_unit_pos",
+			"details": "Indicates a unit's position on the battle map",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "point_at_unit_group_pos",
+			"contents": "point_at_unit_group_pos",
+			"details": "Indicates a unit_group's position on the battle map",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "remove_battle_map_arrow",
+			"contents": "remove_battle_map_arrow",
+			"details": "removes the arrow created by point_at_location/unit/unit_group",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "point_at_card",
+			"contents": "point_at_card",
+			"details": "Points at the card type specified if it can be found<br>			  For units and buildings 'id' is their id in the tech-tree<br>			  For characters it is their name<br>			  Use nth instance to skip over cards with the same type",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "point_at_unit_card",
+			"contents": "point_at_unit_card",
+			"details": "Points at the card of the specified unit",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "e_point_at_unit_card",
+			"contents": "e_point_at_unit_card",
+			"details": "Points at the card of the unit referred to in the current event context",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "show_mouse_button_animation",
+			"contents": "show_mouse_button_animation",
+			"details": "Starts/stops the animation showing which mouse button to press (either left or right at the moment)",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "show_movie",
+			"contents": "show_movie",
+			"details": "Displays a movie",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "hide_ui",
+			"contents": "hide_ui",
+			"details": "Hide the entire UI (for cinematic purposes)",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "show_ui",
+			"contents": "show_ui",
+			"details": "Show the entire UI (after hiding)",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "disable_ui",
+			"contents": "disable_ui",
+			"details": "turn off the named UI element",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "enable_ui",
+			"contents": "enable_ui",
+			"details": "turn on the named UI element",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "disable_entire_ui",
+			"contents": "disable_entire_ui",
+			"details": "suspend the entire UI",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "enable_entire_ui",
+			"contents": "enable_entire_ui",
+			"details": "reactivate the entire UI",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "set_cards_selectable",
+			"contents": "set_cards_selectable",
+			"details": "set whether cards are selectble or not",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "disable_cursor",
+			"contents": "disable_cursor",
+			"details": "deactivate and hide the cursor",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "enable_cursor",
+			"contents": "enable_cursor",
+			"details": "activate and show the cursor",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "rename_settlement_in_region",
+			"contents": "rename_settlement_in_region",
+			"details": "rename a settlement to a given name",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "add_religion",
+			"contents": "add_religion",
+			"details": "Add commitment to a given religion into a region",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "add_hidden_resource",
+			"contents": "add_hidden_resource",
+			"details": "add a hidden resource to a given region",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "remove_hidden_resource",
+			"contents": "remove_hidden_resource",
+			"details": "remove a hidden resource to a given region",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "destroy_building",
+			"contents": "destroy_building",
+			"details": "destroy a building in a settlement",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "reveal_tile",
+			"contents": "reveal_tile",
+			"details": "remove the shroud from the tile",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "hide_all_revealed_tiles",
+			"contents": "hide_all_revealed_tiles",
+			"details": "restore all tile shrouds",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "play_video",
+			"contents": "play_video",
+			"details": "play a piece of video",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "advance_advice_thread",
+			"contents": "advance_advice_thread",
+			"details": "Increment the score of the advice thread",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "dismiss_advice",
+			"contents": "dismiss_advice",
+			"details": "Dismiss the currently displayed advice",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "dismiss_advisor",
+			"contents": "dismiss_advisor",
+			"details": "Dismiss the advisor",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "suspend_unscripted_advice",
+			"contents": "suspend_unscripted_advice",
+			"details": "Suspend (or restore) all advice not generated by the script",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "select_character",
+			"contents": "select_character",
+			"details": "selects a character on the campaign map",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "e_select_character",
+			"contents": "e_select_character",
+			"details": "selects a character referred to in the current event context on the campaign map",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "select_settlement",
+			"contents": "select_settlement",
+			"details": "selects a settlement on the campaign map",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "e_select_settlement",
+			"contents": "e_select_settlement",
+			"details": "selects a settlement referred to in the current event context on the campaign map",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "call_object_shortcut",
+			"contents": "call_object_shortcut",
+			"details": "calls the keyboard shortcut of a ui element<br>			  the shortcut name can left out<br>			  Most buttons don't require a shortcut name, instead the 'on_select' method is called",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "simulate_mouse_click",
+			"contents": "simulate_mouse_click",
+			"details": "Acts as if the given mouse event had happened on the currently 'selected' ui_element (see 'select_ui_element' command)",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "select_ui_element",
+			"contents": "select_ui_element",
+			"details": "Use in conjunction with simulate mouse click to store the element that will next recieve the simulated mouse click",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "disable_shortcuts",
+			"contents": "disable_shortcuts",
+			"details": "This will disable/enable all keyboard shortcuts for a given element (or all elements if element_id is omitted), except the key defined as being the 'quit' key (ESC by default).  See data/descr_shortcuts.txt for the element_ids that are useable",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "filter_unit_commands",
+			"contents": "filter_unit_commands",
+			"details": "Turn off the command shell, or one part of it, for all units or the named unit",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "filter_unit_group_commands",
+			"contents": "filter_unit_group_commands",
+			"details": "Turn off the command shell, or one part of it, for all units or the named unit",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "filter_unit_selection_commands",
+			"contents": "filter_unit_selection_commands",
+			"details": "Turn off the command shell, or one part of it, for all units",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "filter_settlement_commands",
+			"contents": "filter_settlement_commands",
+			"details": "Turn off the command shell, or one part of it, for all settlements or the named settlement",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "filter_character_commands",
+			"contents": "filter_character_commands",
+			"details": "Turn off the command shell, or one part of it, for all characters or the named character",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "filter_all_ui_commands",
+			"contents": "filter_all_ui_commands",
+			"details": "Turn on or off the command shell",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "ui_indicator",
+			"contents": "ui_indicator",
+			"details": "Display a UI indicator",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "ui_indicator_remove",
+			"contents": "ui_indicator_remove",
+			"details": "Remove a UI indicator",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "steal_esc_key",
+			"contents": "steal_esc_key",
+			"details": "Steals keyboard input for the escape key, taking away it's default behaviour.  When the ESC kay is pressed, the trigger ET_ESC_PRESSED will fire, so this should be monitored.  Default functionality of esc will be returned at this point.  Note that if anything else steals the esc key after this command, then that will get priority instead.  The intended use for this command is to allow script writers to create skippable sections that are skipped by pressing ESC",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "highlight_recruitment_item",
+			"contents": "highlight_recruitment_item",
+			"details": "will highlight the given unit in the recruitment queue. If the item isn't being shown, then the slider will be set so that the item is visible. Add 'false' to the end to stop the flashing",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "highlight_construction_item",
+			"contents": "highlight_construction_item",
+			"details": "will highlight the given building in the construction queue. If the item isn't being shown, then the slider will be set so that the item is visible",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "show_annotations",
+			"contents": "show_annotations",
+			"details": "Display the annotations file",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "e_select_unit",
+			"contents": "e_select_unit",
+			"details": "Selects the trigger unit",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "open_siege_scroll",
+			"contents": "open_siege_scroll",
+			"details": "Opens the siege scroll",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "control_feral_anim",
+			"contents": "control_feral_anim",
+			"details": "Triggers feral animations",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "select_captial",
+			"contents": "select_captial",
+			"details": "selects the player's capital",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "show_building_info",
+			"contents": "show_building_info",
+			"details": "Trys to show a building info for the currently selected settlement",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "show_unit_info",
+			"contents": "show_unit_info",
+			"details": "Trys to show a unit's info for the currently selected settlement",
+			"kind": ["keyword", "C", "Command"]
+		},
+		{
+			"trigger": "I_InBattle",
+			"contents": "I_InBattle",
+			"details": "Are we in battle?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "WonBattle",
+			"contents": "WonBattle",
+			"details": "Did the general win the battle just fought?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_WonBattle",
+			"contents": "I_WonBattle",
+			"details": "Did the faction win the battle just fought?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "Routs",
+			"contents": "Routs",
+			"details": "Did the general's unit rout in the battle just fought?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "Ally_Routs",
+			"contents": "Ally_Routs",
+			"details": "Did any ally's general's units rout in the battle just fought?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "GeneralHPLostRatioinBattle",
+			"contents": "GeneralHPLostRatioinBattle",
+			"details": "Test to see what the HP lost ratio of the prior battle was",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "GeneralNumKillsInBattle",
+			"contents": "GeneralNumKillsInBattle",
+			"details": "Test to see how many kills the character scored in the prior battle was",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "GeneralFoughtInCombat",
+			"contents": "GeneralFoughtInCombat",
+			"details": "Test to see if the character entered combat in the prior battle",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "PercentageOfArmyKilled",
+			"contents": "PercentageOfArmyKilled",
+			"details": "Test to see what percentage of their men they lost in the prior battle",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_PercentageOfArmyKilled",
+			"contents": "I_PercentageOfArmyKilled",
+			"details": "Tests the percentage of casualties taken by the specified army during this battle",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "PercentageEnemyKilled",
+			"contents": "PercentageEnemyKilled",
+			"details": "Test to see what percentage of the enemy was killed in the prior battle",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "PercentageBodyguardKilled",
+			"contents": "PercentageBodyguardKilled",
+			"details": "Test to see what percentage of their bodyguard was killed in the prior battle",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "PercentageRoutedOffField",
+			"contents": "PercentageRoutedOffField",
+			"details": "Test to see the percentage of the character's soldiers who routed",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "NumKilledGenerals",
+			"contents": "NumKilledGenerals",
+			"details": "Test to see how many generals were killed",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "PercentageUnitCategory",
+			"contents": "PercentageUnitCategory",
+			"details": "Test to see what percentage of the army were of a particular category",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "NumFriendsInBattle",
+			"contents": "NumFriendsInBattle",
+			"details": "Test the number of soldiers and officers in allied armies",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "NumEnemiesInBattle",
+			"contents": "NumEnemiesInBattle",
+			"details": "Test the number of soldiers and officers in enemy armies",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "GeneralFoughtFaction",
+			"contents": "GeneralFoughtFaction",
+			"details": "Test to see whether the opponent was of a particular faction in the prior battle",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "GeneralFoughtCulture",
+			"contents": "GeneralFoughtCulture",
+			"details": "Test to see whether the opponent was of a particular culture in the prior battle",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_ConflictType",
+			"contents": "I_ConflictType",
+			"details": "Test the type of conflict (ambush, siege &c.)",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "IsNightBattle",
+			"contents": "IsNightBattle",
+			"details": "Test if this is a night battle",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleSuccess",
+			"contents": "BattleSuccess",
+			"details": "Test the type of success",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleOdds",
+			"contents": "BattleOdds",
+			"details": "Test the odds to win i.e. 5 (5:1)",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "WasAttacker",
+			"contents": "WasAttacker",
+			"details": "Was the character the aggressor?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleAiAttacking",
+			"contents": "I_BattleAiAttacking",
+			"details": "Is the enemy ai planning to attack the player?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleAiAttackingSettlement",
+			"contents": "I_BattleAiAttackingSettlement",
+			"details": "Is the enemy ai planning to attack the player's settlement?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleAiDefendingSettlement",
+			"contents": "I_BattleAiDefendingSettlement",
+			"details": "Is the enemy ai planning to defend it's settlement?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleAiDefendingHill",
+			"contents": "I_BattleAiDefendingHill",
+			"details": "Is the enemy ai planning to defend a hill?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleAiDefendingCrossing",
+			"contents": "I_BattleAiDefendingCrossing",
+			"details": "Is the enemy ai planning to defend a crossing?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleAiScouting",
+			"contents": "I_BattleAiScouting",
+			"details": "Is the enemy ai planning to scout?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleIsRiverBattle",
+			"contents": "I_BattleIsRiverBattle",
+			"details": "Is this a river battle?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleIsSiegeBattle",
+			"contents": "I_BattleIsSiegeBattle",
+			"details": "Is this a siege battle?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleIsSallyOutBattle",
+			"contents": "I_BattleIsSallyOutBattle",
+			"details": "Is this a sally out battle?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleIsFortBattle",
+			"contents": "I_BattleIsFortBattle",
+			"details": "Is this a fort battle?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleAttackerNumSiegeEngines",
+			"contents": "I_BattleAttackerNumSiegeEngines",
+			"details": "How many of this engine type are present?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleAttackerNumArtilleryCanPenetrateWalls",
+			"contents": "I_BattleAttackerNumArtilleryCanPenetrateWalls",
+			"details": "How many of the attackers artillery can penetrate the siege walls",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleDefenderNumNonMissileUnitsOnWalls",
+			"contents": "I_BattleDefenderNumNonMissileUnitsOnWalls",
+			"details": "How many of the defenders non-missile units are on the walls",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleDefenderNumMissileUnitsOnWalls",
+			"contents": "I_BattleDefenderNumMissileUnitsOnWalls",
+			"details": "How many of the defenders missile units are on the walls",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleSettlementWallsBreached",
+			"contents": "I_BattleSettlementWallsBreached",
+			"details": "Have the walls of the settlement been breached?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleSettlementGateDestroyed",
+			"contents": "I_BattleSettlementGateDestroyed",
+			"details": "Has a gate in the settlement been destroyed?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleSettlementTowerDefence",
+			"contents": "I_BattleSettlementTowerDefence",
+			"details": "What type of tower defence is this settlement equipped with?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleSettlementGateDefence",
+			"contents": "I_BattleSettlementGateDefence",
+			"details": "What type of gate defence is this settlement equipped with?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleSettlementFortificationLevel",
+			"contents": "I_BattleSettlementFortificationLevel",
+			"details": "What is the fortification level of this settlement?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleBuildingType",
+			"contents": "BattleBuildingType",
+			"details": "What type of building is this?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleSettlementGateStrength",
+			"contents": "I_BattleSettlementGateStrength",
+			"details": "What is the strength of the settlement gates?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleNumberOfRiverCrossings",
+			"contents": "I_BattleNumberOfRiverCrossings",
+			"details": "How many river crossings are there on this map?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattlePlayerUnitClass",
+			"contents": "BattlePlayerUnitClass",
+			"details": "What is the class of the player unit?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleEnemyUnitClass",
+			"contents": "BattleEnemyUnitClass",
+			"details": "What is the class of the enemy unit?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattlePlayerUnitCategory",
+			"contents": "BattlePlayerUnitCategory",
+			"details": "What is the category of the player unit?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleEnemyUnitCategory",
+			"contents": "BattleEnemyUnitCategory",
+			"details": "What is the category of the enemy unit?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattlePlayerUnitSiegeEngineClass",
+			"contents": "BattlePlayerUnitSiegeEngineClass",
+			"details": "What type of siege engine is the player unit?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleEnemyUnitSiegeEngineClass",
+			"contents": "BattleEnemyUnitSiegeEngineClass",
+			"details": "What type of siege engine is the enemy unit?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattlePlayerUnitOnWalls",
+			"contents": "BattlePlayerUnitOnWalls",
+			"details": "Is the player unit on the walls?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleEnemyUnitOnWalls",
+			"contents": "BattleEnemyUnitOnWalls",
+			"details": "Is the enemy unit on the walls?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattlePlayerCurrentFormation",
+			"contents": "BattlePlayerCurrentFormation",
+			"details": "What is the current formation of the player unit?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleEnemyCurrentFormation",
+			"contents": "BattleEnemyCurrentFormation",
+			"details": "What is the current formation of the enemy unit?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattlePlayerUnitCloseFormation",
+			"contents": "BattlePlayerUnitCloseFormation",
+			"details": "Is the player unit in close formation, otherwise loose?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleEnemyUnitCloseFormation",
+			"contents": "BattleEnemyUnitCloseFormation",
+			"details": "Is the enemy unit in close formation, otherwise loose?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattlePlayerUnitSpecialAbilitySupported",
+			"contents": "BattlePlayerUnitSpecialAbilitySupported",
+			"details": "What special ability can the player unit support?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleSelectedPlayerUnitSpecialAbilitySupported",
+			"contents": "BattleSelectedPlayerUnitSpecialAbilitySupported",
+			"details": "What special ability can the selected units support?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleEnemyUnitSpecialAbilitySupported",
+			"contents": "BattleEnemyUnitSpecialAbilitySupported",
+			"details": "What special ability can the enemy unit support?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattlePlayerUnitSpecialAbilityActive",
+			"contents": "BattlePlayerUnitSpecialAbilityActive",
+			"details": "Is the player unit currently doing its special ability",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleEnemyUnitSpecialAbilityActive",
+			"contents": "BattleEnemyUnitSpecialAbilityActive",
+			"details": "Is the enemy unit currently doing its special ability",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattlePlayerMountClass",
+			"contents": "BattlePlayerMountClass",
+			"details": "What is the mount class of the player unit?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleEnemyMountClass",
+			"contents": "BattleEnemyMountClass",
+			"details": "What is the mount class of the enemy unit?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattlePlayerUnitMeleeStrength",
+			"contents": "BattlePlayerUnitMeleeStrength",
+			"details": "Compare the melee strength of a unit with a known value",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleEnemyUnitMeleeStrength",
+			"contents": "BattleEnemyUnitMeleeStrength",
+			"details": "Compare the melee strength of a unit with a known value",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattlePlayerUnitMissileStrength",
+			"contents": "BattlePlayerUnitMissileStrength",
+			"details": "Compare the missile strength of a unit with a known value",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleEnemyUnitMissileStrength",
+			"contents": "BattleEnemyUnitMissileStrength",
+			"details": "Compare the missile strength of a unit with a known value",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattlePlayerUnitSpecialFormation",
+			"contents": "BattlePlayerUnitSpecialFormation",
+			"details": "What is the special formation of the player unit",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleEnemyUnitSpecialFormation",
+			"contents": "BattleEnemyUnitSpecialFormation",
+			"details": "What is the special formation of the enemy unit",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattlePlayerUnitEngaged",
+			"contents": "BattlePlayerUnitEngaged",
+			"details": "Is the player unit engaged in battle",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleEnemyUnitEngaged",
+			"contents": "BattleEnemyUnitEngaged",
+			"details": "Is the enemy unit engaged in battle",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattlePlayerActionStatus",
+			"contents": "BattlePlayerActionStatus",
+			"details": "What is the current action status of the player unit",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleEnemyActionStatus",
+			"contents": "BattleEnemyActionStatus",
+			"details": "What is the current action status of the player unit",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattlePlayerUnitMovingFast",
+			"contents": "BattlePlayerUnitMovingFast",
+			"details": "Is the player unit moving fast",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleEnemyUnitMovingFast",
+			"contents": "BattleEnemyUnitMovingFast",
+			"details": "Is the enemy unit moving fast",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleRangeOfAttack",
+			"contents": "BattleRangeOfAttack",
+			"details": "Test the range of the attack (in m)",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleDirectionOfAttack",
+			"contents": "BattleDirectionOfAttack",
+			"details": "Test direction of the attack",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleIsMeleeAttack",
+			"contents": "BattleIsMeleeAttack",
+			"details": "Is the attacker initiating a melee attack (otherwise missile attack)",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattlePlayerArmyPercentageOfUnitClass",
+			"contents": "I_BattlePlayerArmyPercentageOfUnitClass",
+			"details": "Test makeup of army by unit class",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleEnemyArmyPercentageOfUnitClass",
+			"contents": "I_BattleEnemyArmyPercentageOfUnitClass",
+			"details": "Test makeup of army by unit class",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattlePlayerArmyPercentageOfUnitCategory",
+			"contents": "I_BattlePlayerArmyPercentageOfUnitCategory",
+			"details": "Test makeup of army by unit category",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleEnemyArmyPercentageOfUnitCategory",
+			"contents": "I_BattleEnemyArmyPercentageOfUnitCategory",
+			"details": "Test makeup of army by unit category",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattlePlayerArmyPercentageOfMountClass",
+			"contents": "I_BattlePlayerArmyPercentageOfMountClass",
+			"details": "Test makeup of army by mount class",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleEnemyArmyPercentageOfMountClass",
+			"contents": "I_BattleEnemyArmyPercentageOfMountClass",
+			"details": "Test makeup of army by mount class",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattlePlayerArmyPercentageOfClassAndCategory",
+			"contents": "I_BattlePlayerArmyPercentageOfClassAndCategory",
+			"details": "Test makeup of army by mount class",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleEnemyArmyPercentageOfClassAndCategory",
+			"contents": "I_BattleEnemyArmyPercentageOfClassAndCategory",
+			"details": "Test makeup of army by mount class",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattlePlayerArmyPercentageOfSpecialAbility",
+			"contents": "I_BattlePlayerArmyPercentageOfSpecialAbility",
+			"details": "Test makeup of army by special ability",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleEnemyArmyPercentageOfSpecialAbility",
+			"contents": "I_BattleEnemyArmyPercentageOfSpecialAbility",
+			"details": "Test makeup of army by special ability",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattlePlayerArmyPercentageCanHide",
+			"contents": "I_BattlePlayerArmyPercentageCanHide",
+			"details": "Test makeup of army by hide capability",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleEnemyArmyPercentageCanHide",
+			"contents": "I_BattleEnemyArmyPercentageCanHide",
+			"details": "Test makeup of army by hide capability",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattlePlayerArmyPercentageCanSwim",
+			"contents": "I_BattlePlayerArmyPercentageCanSwim",
+			"details": "Test makeup of army by swim capability",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleEnemyArmyPercentageCanSwim",
+			"contents": "I_BattleEnemyArmyPercentageCanSwim",
+			"details": "Test makeup of army by swim capability",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattlePlayerArmyIsAttacker",
+			"contents": "I_BattlePlayerArmyIsAttacker",
+			"details": "Is the player attacking",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattlePlayerAllianceOddsInFavour",
+			"contents": "I_BattlePlayerAllianceOddsInFavour",
+			"details": "Odds in favour of the player i.e. 5 (5:1)",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattlePlayerAllianceOddsAgainst",
+			"contents": "I_BattlePlayerAllianceOddsAgainst",
+			"details": "Odds against the player i.e. 5 (5:1)",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "TotalSiegeWeapons",
+			"contents": "TotalSiegeWeapons",
+			"details": "Test to see how many siege weapons this characters army has got for an assault.",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleStarted",
+			"contents": "I_BattleStarted",
+			"details": "Has the battle deployment phase ended",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleFinished",
+			"contents": "I_BattleFinished",
+			"details": "Has the battle 'finished' phase started",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleEnd",
+			"contents": "I_BattleEnd",
+			"details": "Has the battle entered one of the end phases (ending or finish countdown, not end pending, see IBattleEndPending for that)",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleEndPending",
+			"contents": "I_BattleEndPending",
+			"details": "Has the battle entered the end pending phase (ie dialog to the human player for whether they want to mop up the leftovers)",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_IsUnitMoveFastSet",
+			"contents": "I_IsUnitMoveFastSet",
+			"details": "Is the specified unit flagged to move fast",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_IsUnitMoving",
+			"contents": "I_IsUnitMoving",
+			"details": "Is the specified unit moving",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_IsUnitIdle",
+			"contents": "I_IsUnitIdle",
+			"details": "Is the specified unit idle?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_IsUnitRouting",
+			"contents": "I_IsUnitRouting",
+			"details": "Is the specified unit routing?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_IsUnitUnderFire",
+			"contents": "I_IsUnitUnderFire",
+			"details": "Is the specified unit recieving missile fire?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_IsUnitEngaged",
+			"contents": "I_IsUnitEngaged",
+			"details": "Is the specified unit engaged in combat?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_IsUnitEngagedWithUnit",
+			"contents": "I_IsUnitEngagedWithUnit",
+			"details": "Tests if one specified unit is engaged in combat with the other specified unit?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_UnitFormation",
+			"contents": "I_UnitFormation",
+			"details": "Is the specified unit in the specified formation",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_PercentageUnitKilled",
+			"contents": "I_PercentageUnitKilled",
+			"details": "Tests the percentage of men lost from the specified unit",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_UnitPercentageAmmoLeft",
+			"contents": "I_UnitPercentageAmmoLeft",
+			"details": "Tests the percentage of ammo the unit has remaining",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_UnitDistanceFromPosition",
+			"contents": "I_UnitDistanceFromPosition",
+			"details": "Tests the specified unit's range from the given position",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_UnitDistanceFromLine",
+			"contents": "I_UnitDistanceFromLine",
+			"details": "Tests the specified unit's distance from the line (looking from A to B, a unit to the left of the line will give a negative distance, one on the right will be positive)",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_UnitDistanceFromUnit",
+			"contents": "I_UnitDistanceFromUnit",
+			"details": "Tests the 2 specified units' distance from each other",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_UnitInRangeOfUnit",
+			"contents": "I_UnitInRangeOfUnit",
+			"details": "Tests if the attacker can hit the target with missile weapons",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_UnitDestroyed",
+			"contents": "I_UnitDestroyed",
+			"details": "Has the specified unit been wiped out?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_UnitEnemyUnitInRadius",
+			"contents": "I_UnitEnemyUnitInRadius",
+			"details": "Tests if there is any enemy within the specified radius of the unit",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_IsUnitGroupMoving",
+			"contents": "I_IsUnitGroupMoving",
+			"details": "Is any unit in the group moving?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_IsUnitGroupEngaged",
+			"contents": "I_IsUnitGroupEngaged",
+			"details": "Is any unit in the group engaged in combat?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_IsUnitGroupIdle",
+			"contents": "I_IsUnitGroupIdle",
+			"details": "Are all units in the group idle?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_IsUnitGroupDestroyed",
+			"contents": "I_IsUnitGroupDestroyed",
+			"details": "Is the unit group destroyed (killed or routed)",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_PercentageUnitGroupKilled",
+			"contents": "I_PercentageUnitGroupKilled",
+			"details": "Tests the percentage of men lost from the unit group",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_UnitGroupFormation",
+			"contents": "I_UnitGroupFormation",
+			"details": "Tests the unit group's group formation",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_UnitGroupDistanceFromPosition",
+			"contents": "I_UnitGroupDistanceFromPosition",
+			"details": "Tests the unit_group's centre_front against the given position",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_UnitGroupDistanceFromGroup",
+			"contents": "I_UnitGroupDistanceFromGroup",
+			"details": "Tests the distance between two unit groups",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_UnitGroupInRangeOfUnit",
+			"contents": "I_UnitGroupInRangeOfUnit",
+			"details": "Tests if any unit in the group is within range of the target unit",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_UnitInRangeOfUnitGroup",
+			"contents": "I_UnitInRangeOfUnitGroup",
+			"details": "Tests if the unit is within range of any of the units in the target group",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_UnitGroupInRangeOfUnitGroup",
+			"contents": "I_UnitGroupInRangeOfUnitGroup",
+			"details": "Tests if any unit in the group can hit any unit in the target group",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_PlayerInRangeOfUnitGroup",
+			"contents": "I_PlayerInRangeOfUnitGroup",
+			"details": "tests if any player unit is in range of any unit in the group",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_PlayerInRangeOfUnit",
+			"contents": "I_PlayerInRangeOfUnit",
+			"details": "Is any unit in the player's army in range of the specified unit",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_UnitTypeSelected",
+			"contents": "I_UnitTypeSelected",
+			"details": "Tests if the player has a particular unit type selected",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "UnitType",
+			"contents": "UnitType",
+			"details": "Tests if a unit is of a particular type",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_UnitSelected",
+			"contents": "I_UnitSelected",
+			"details": "Is the specified unit selected?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_MultipleUnitsSelected",
+			"contents": "I_MultipleUnitsSelected",
+			"details": "Are multiple units selected?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_SpecificUnitsSelected",
+			"contents": "I_SpecificUnitsSelected",
+			"details": "Tests if all the specified units are selected",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_IsCameraZoomingToUnit",
+			"contents": "I_IsCameraZoomingToUnit",
+			"details": "Tests if the camera is zooming to the specified unit",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleEnemyArmyPercentageOfMatchingUnits",
+			"contents": "I_BattleEnemyArmyPercentageOfMatchingUnits",
+			"details": "Test to see what percentage of the enemy army matches a particular match category",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattleEnemyArmyNumberOfMatchingUnits",
+			"contents": "I_BattleEnemyArmyNumberOfMatchingUnits",
+			"details": "Test to see how many units of the enemy army match a particular match category",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattlePlayerArmyPercentageOfMatchingUnits",
+			"contents": "I_BattlePlayerArmyPercentageOfMatchingUnits",
+			"details": "Test to see what percentage of the player's army matches a particular match category",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_BattlePlayerArmyNumberOfMatchingUnits",
+			"contents": "I_BattlePlayerArmyNumberOfMatchingUnits",
+			"details": "Test to see how many units of the player's army match a particular match category",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "LocalPlayerHasManualReinforcements",
+			"contents": "LocalPlayerHasManualReinforcements",
+			"details": "Test to see if the player has manual reinforcements",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "LocalPlayerHasAIReinforcements",
+			"contents": "LocalPlayerHasAIReinforcements",
+			"details": "Test to see if the player has AI reinforcements",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "Trait",
+			"contents": "Trait",
+			"details": "Test a character trait",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "HasAncillary",
+			"contents": "HasAncillary",
+			"details": "Test a character ancillary",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "FatherTrait",
+			"contents": "FatherTrait",
+			"details": "Test a character's father's traits for hereditary traits",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "FactionLeaderTrait",
+			"contents": "FactionLeaderTrait",
+			"details": "Test a character's faction leader traits",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "Attribute",
+			"contents": "Attribute",
+			"details": "Test a character's attributes or hidden attributes",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "RemainingMPPercentage",
+			"contents": "RemainingMPPercentage",
+			"details": "If this character has not moved this turn, he should have maximum movement points left.  Test for percentage remaining.  Will almost never be exactly zero, so check for &lt; 10",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_RemainingMPPercentage",
+			"contents": "I_RemainingMPPercentage",
+			"details": "If this character has not moved this turn, he should have maximum movement points left.  Test for percentage remaining.  Will almost never be exactly zero, so check for &lt; 10",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_CharacterCanMove",
+			"contents": "I_CharacterCanMove",
+			"details": "Can the named character move to any square?  He may only be able to move in one direction, particularly the one he came from, so don't assume ability to move means he can move usefully.",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "NoActionThisTurn",
+			"contents": "NoActionThisTurn",
+			"details": "Test to see if the character was idle throughout this turn",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "AgentType",
+			"contents": "AgentType",
+			"details": "Test to see if a character is of a particular type (spy, admiral, named character &c.)",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "TrainedAgentType",
+			"contents": "TrainedAgentType",
+			"details": "Test to see if a character is of a particular type (spy, admiral, named character &c.)",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "DisasterType",
+			"contents": "DisasterType",
+			"details": "Test to see if a particular disaster just happened",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "CultureType",
+			"contents": "CultureType",
+			"details": "Test the character's culture type",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "OriginalFactionType",
+			"contents": "OriginalFactionType",
+			"details": "Test the character's original faction type",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "OriginalCultureType",
+			"contents": "OriginalCultureType",
+			"details": "Test the character's original culture type",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "IsGeneral",
+			"contents": "IsGeneral",
+			"details": "Test to see if the character can command a land army",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "IsAdmiral",
+			"contents": "IsAdmiral",
+			"details": "Test to see if the character has an army",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "RemasteredEducation",
+			"contents": "RemasteredEducation",
+			"details": "Test to see if the remastered education triggers should be used",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "EndedInSettlement",
+			"contents": "EndedInSettlement",
+			"details": "Test to see if the character is in a settlement",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "IsFactionLeader",
+			"contents": "IsFactionLeader",
+			"details": "Test to see if the character is a faction leader",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "IsFactionHeir",
+			"contents": "IsFactionHeir",
+			"details": "Test to see if the character is a faction heir",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "IsMarried",
+			"contents": "IsMarried",
+			"details": "Test to see if the character is married",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "AtSea",
+			"contents": "AtSea",
+			"details": "Is the character at sea?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "InEnemyLands",
+			"contents": "InEnemyLands",
+			"details": "Is the character in enemy lands?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "InBarbarianLands",
+			"contents": "InBarbarianLands",
+			"details": "Is the character in lands of a barbarian culture?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "InUncivilisedLands",
+			"contents": "InUncivilisedLands",
+			"details": "Is the character in lands of an uncivilised culture?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "IsBesieging",
+			"contents": "IsBesieging",
+			"details": "Is the character besieging a settlement?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "IsUnderSiege",
+			"contents": "IsUnderSiege",
+			"details": "Is the character in a garrison residence under siege?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_WithdrawsBeforeBattle",
+			"contents": "I_WithdrawsBeforeBattle",
+			"details": "Was the last battle aborted?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "EndedInEnemyZOC",
+			"contents": "EndedInEnemyZOC",
+			"details": "Is the character in an enemy zone of control?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "AdviseAction",
+			"contents": "AdviseAction",
+			"details": "Is this the best thing this character can do now?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_CharacterTypeNearCharacterType",
+			"contents": "I_CharacterTypeNearCharacterType",
+			"details": "Is a particular character type of a faction near another particular character type of another faction?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_CharacterTypeNearTile",
+			"contents": "I_CharacterTypeNearTile",
+			"details": "Is a particular character type of a faction near a particular tile?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_CharacterNameNearTile",
+			"contents": "I_CharacterNameNearTile",
+			"details": "Is a particular character near a particular tile?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "TradingResource",
+			"contents": "TradingResource",
+			"details": "Test if the current merchant is standing on and trading the specified resource",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "RegionTradingResource",
+			"contents": "RegionTradingResource",
+			"details": "Tests if the current merchant is trading a resource in the provided group. Does not need to be standing on said resource.",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "TradingExotic",
+			"contents": "TradingExotic",
+			"details": "Is the character trading an exotic resource?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "DistanceCapital",
+			"contents": "DistanceCapital",
+			"details": "Does the characters distance to the faction capital exceed the given threshold?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "DistanceHome",
+			"contents": "DistanceHome",
+			"details": "Does the characters distance to their home settlement exceed the given threshold?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "TradingGroup",
+			"contents": "TradingGroup",
+			"details": "Checks if the characters faction is merchant trading each of the resources within the group. Also, required this merchant to be trading one of them.",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "RegionMerchantCount",
+			"contents": "RegionMerchantCount",
+			"details": "Do the number of merchants in the characters region exceed the given value?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "PreciousMineCount",
+			"contents": "PreciousMineCount",
+			"details": "Does the amount of Precious minerals we are mining exceed the given value? (Resource Quantity * Mine Levels)",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "IsFromFaction",
+			"contents": "IsFromFaction",
+			"details": "Is this character from a faction within the provided faction group?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "NightBattlesEnabled",
+			"contents": "NightBattlesEnabled",
+			"details": "Is night battles enabled",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "character_age",
+			"contents": "character_age",
+			"details": "Checks the age of a character",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "HasOffice",
+			"contents": "HasOffice",
+			"details": "Checks if a character holds a senate office (or is just about to leave one, in the case of LeaveOffice)",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "FactionType",
+			"contents": "FactionType",
+			"details": "Test the faction type",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "TargetFactionType",
+			"contents": "TargetFactionType",
+			"details": "Test the target faction type",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "FactionCultureType",
+			"contents": "FactionCultureType",
+			"details": "Test the faction's culture type",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "TargetFactionCultureType",
+			"contents": "TargetFactionCultureType",
+			"details": "Test the target faction's culture type",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "TrainedUnitCategory",
+			"contents": "TrainedUnitCategory",
+			"details": "Test to see if the unit is of a particular category",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "UnitCategory",
+			"contents": "UnitCategory",
+			"details": "Test to see if the unit is of a particular category",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "SenateMissionTimeRemaining",
+			"contents": "SenateMissionTimeRemaining",
+			"details": "Test the number of turns before the next senate mission expires",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "MedianTaxLevel",
+			"contents": "MedianTaxLevel",
+			"details": "Compare the median tax level",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "ModeTaxLevel",
+			"contents": "ModeTaxLevel",
+			"details": "Compare the mode tax level",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_ModeTaxLevel",
+			"contents": "I_ModeTaxLevel",
+			"details": "Compare the mode tax level",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "MissionSuccessLevel",
+			"contents": "MissionSuccessLevel",
+			"details": "Was the mission sufficiently successful?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "MissionSucceeded",
+			"contents": "MissionSucceeded",
+			"details": "Was the mission sufficiently successful?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "MissionFactionTargetType",
+			"contents": "MissionFactionTargetType",
+			"details": "Is the faction of a particular type?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "MissionCultureTargetType",
+			"contents": "MissionCultureTargetType",
+			"details": "Is the faction of a particular type?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "DiplomaticStanceFromCharacter",
+			"contents": "DiplomaticStanceFromCharacter",
+			"details": "Test the character's faction's diplomatic stance with another specified faction",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "DiplomaticStanceFromFaction",
+			"contents": "DiplomaticStanceFromFaction",
+			"details": "Test the character's faction's diplomatic stance with another specified faction",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "FactionHasAllies",
+			"contents": "FactionHasAllies",
+			"details": "Test whether the faction is allied with any other faction",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "LosingMoney",
+			"contents": "LosingMoney",
+			"details": "Is the faction losing money on the end of year balance sheet?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_LosingMoney",
+			"contents": "I_LosingMoney",
+			"details": "Is the faction losing money on the end of year balance sheet?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "FactionIsAlive",
+			"contents": "FactionIsAlive",
+			"details": "Checks if the given faction is alive (as opposed to waiting to emerge or defeated)",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "SupportCostsPercentage",
+			"contents": "SupportCostsPercentage",
+			"details": "Does the percentage of expenditure devoted to support costs exceed the threshold?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "Treasury",
+			"contents": "Treasury",
+			"details": "Does the cash-in-hand exceed the threshold?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "OnAWarFooting",
+			"contents": "OnAWarFooting",
+			"details": "Is the faction on a war footing?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_FactionBesieging",
+			"contents": "I_FactionBesieging",
+			"details": "Is the faction besieging a settlement somewhere?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_FactionBesieged",
+			"contents": "I_FactionBesieged",
+			"details": "Is the faction besieged at any settlement?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_NumberOfSettlements",
+			"contents": "I_NumberOfSettlements",
+			"details": "How many settlements does the faction hold?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_NumberOfHeirs",
+			"contents": "I_NumberOfHeirs",
+			"details": "How many heirs does the faction leader have?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_FactionNearTile",
+			"contents": "I_FactionNearTile",
+			"details": "Is a member of a faction near a particular tile?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "SettlementsTaken",
+			"contents": "SettlementsTaken",
+			"details": "How many settlements has the player captured so far during this campaign?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattlesFought",
+			"contents": "BattlesFought",
+			"details": "How many battles has the player fought so far during this campaign?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattlesWon",
+			"contents": "BattlesWon",
+			"details": "How many battles has the player won so far during this campaign?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattlesLost",
+			"contents": "BattlesLost",
+			"details": "How many battles has the player won so far during this campaign?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "DefensiveSiegesFought",
+			"contents": "DefensiveSiegesFought",
+			"details": "How many defensive sieges has the player fought so far during this campaign?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "DefensiveSiegesWon",
+			"contents": "DefensiveSiegesWon",
+			"details": "How many defensive sieges has the player won so far during this campaign?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "OffensiveSiegesFought",
+			"contents": "OffensiveSiegesFought",
+			"details": "How many offensive sieges has the player fought so far during this campaign?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "OffensiveSiegesWon",
+			"contents": "OffensiveSiegesWon",
+			"details": "How many offensive sieges has the player won so far during this campaign?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "FactionwideAncillaryExists",
+			"contents": "FactionwideAncillaryExists",
+			"details": "Does this ancillary already exist in this faction?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "IsAlly",
+			"contents": "IsAlly",
+			"details": "is this faction allied to the other",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "IsProtectorate",
+			"contents": "IsProtectorate",
+			"details": "is this faction a protectorate of ours?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "IsProtector",
+			"contents": "IsProtector",
+			"details": "is this faction our protector?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "IsSameSuperfaction",
+			"contents": "IsSameSuperfaction",
+			"details": "is this faction in the same superfaction as us? Returns false against former members of our superfaction that were outlawed",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "LocalPlayerBattlesFought",
+			"contents": "LocalPlayerBattlesFought",
+			"details": "How many battles has the player fought so far during this campaign?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "Toggled",
+			"contents": "Toggled",
+			"details": "Is the remaster toggle for this enabled?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "MajorEventActive",
+			"contents": "MajorEventActive",
+			"details": "Is this event active for the given faction",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_IsTutorialEnabled",
+			"contents": "I_IsTutorialEnabled",
+			"details": "Check if a tutorial is enabled",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_IsPlayerTurn",
+			"contents": "I_IsPlayerTurn",
+			"details": "Check to see if the current turn is for player",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "ConstructionItemClicked",
+			"contents": "ConstructionItemClicked",
+			"details": "Check for a given construction item",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "RecruitmentItemClicked",
+			"contents": "RecruitmentItemClicked",
+			"details": "Check for a given recruitment item",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "CharacterName",
+			"contents": "CharacterName",
+			"details": "Checks for a given characters name",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "ScrollDidOpen",
+			"contents": "ScrollDidOpen",
+			"details": "Checks when scroll is open",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "UnitHasRouted",
+			"contents": "UnitHasRouted",
+			"details": "Checks when a unit has routed",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BattleUnitActionStatus",
+			"contents": "BattleUnitActionStatus",
+			"details": "Checks when a unit changes status",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_AmountOfUnitInSettlement",
+			"contents": "I_AmountOfUnitInSettlement",
+			"details": "Check how many of a unit is in a settlement.",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_UnitCardSelected",
+			"contents": "I_UnitCardSelected",
+			"details": "Detect whether the unit card is currently selected",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "RandomPercent",
+			"contents": "RandomPercent",
+			"details": "Pick a number from 0 to 100 at random",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "TrueCondition",
+			"contents": "TrueCondition",
+			"details": "When you need to supply a true/false, for debugging and monitor_event",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "WorldwideAncillaryExists",
+			"contents": "WorldwideAncillaryExists",
+			"details": "Does this ancillary already exist in the world?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_CompareCounter",
+			"contents": "I_CompareCounter",
+			"details": "Compare a script counter to a value",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "TestFaction",
+			"contents": "TestFaction",
+			"details": "Test is a given faction is being used by the player",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "LangIs",
+			"contents": "LangIs",
+			"details": "Test the language",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_TimerElapsed",
+			"contents": "I_TimerElapsed",
+			"details": "How long has it been since the script timer restarted",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_SoundPlaying",
+			"contents": "I_SoundPlaying",
+			"details": "Detect whether the tagged sound is playing or not",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "HasResource",
+			"contents": "HasResource",
+			"details": "For scripting - does the region have this resource",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "SettlementRevoltingFrom",
+			"contents": "SettlementRevoltingFrom",
+			"details": "Only useful in revolt faction spawning scripts - says who the faction that we are in the process of revolting from is",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "IsCapital",
+			"contents": "IsCapital",
+			"details": "Checks if this settlement is a capital",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "SettlementName",
+			"contents": "SettlementName",
+			"details": "For scripting - does the settlement have this name",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "GovernorBuildingExists",
+			"contents": "GovernorBuildingExists",
+			"details": "Test to see if the character is a governor and his settlement has a building at a particular level",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "SettlementBuildingExists",
+			"contents": "SettlementBuildingExists",
+			"details": "Test to see if the settlement has a building at a particular level",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "HomeSettlementBuildingExists",
+			"contents": "HomeSettlementBuildingExists",
+			"details": "Test to see if the home settlement of the triggering character has a building at a particular level",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "SettlementOrderLevel",
+			"contents": "SettlementOrderLevel",
+			"details": "Test to see if the settlements order factor is at a particular level",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "SettlementCapabilityLevel",
+			"contents": "SettlementCapabilityLevel",
+			"details": "Test to see if the settlement has a capability at a particular level",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BuildingFinishedByGovernor",
+			"contents": "BuildingFinishedByGovernor",
+			"details": "Test to see if the character is a governor and what the last finished building was",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "SettlementBuildingFinished",
+			"contents": "SettlementBuildingFinished",
+			"details": "Test to see what the last finished building was",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "GovernorPlugInExists",
+			"contents": "GovernorPlugInExists",
+			"details": "Test to see if the character is a governor and his settlement has a plug-in at a particular level",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "GovernorPlugInFinished",
+			"contents": "GovernorPlugInFinished",
+			"details": "Test to see if the character is a governor and what the last finished plug-in was",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "GovernorTaxLevel",
+			"contents": "GovernorTaxLevel",
+			"details": "Is the character a governor who is taxing the populace at a particular level?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "SettlementTaxLevel",
+			"contents": "SettlementTaxLevel",
+			"details": "Is the settlement taxing the populace at a particular level?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "GovernorInResidence",
+			"contents": "GovernorInResidence",
+			"details": "Does the settlement lack a governor?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "GovernorLoyaltyLevel",
+			"contents": "GovernorLoyaltyLevel",
+			"details": "Is the character a governor and, if so how loyal is the settlement to him?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "SettlementLoyaltyLevel",
+			"contents": "SettlementLoyaltyLevel",
+			"details": "How loyal is the settlement?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "RiotRisk",
+			"contents": "RiotRisk",
+			"details": "What is the chance of this settlement rioting?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "BuildingQueueIdleDespiteCash",
+			"contents": "BuildingQueueIdleDespiteCash",
+			"details": "Is the faction exploiting its build capability to the full?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "TrainingQueueIdleDespiteCash",
+			"contents": "TrainingQueueIdleDespiteCash",
+			"details": "Is the faction exploiting its recruitment capability to the full?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_SettlementExists",
+			"contents": "I_SettlementExists",
+			"details": "Does a settlement by this name exist?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_SettlementOwner",
+			"contents": "I_SettlementOwner",
+			"details": "Is this settlement owned by this faction?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_SettlementOwnerCulture",
+			"contents": "I_SettlementOwnerCulture",
+			"details": "Is this settlement owned by this faction with this culture?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_SettlementLevel",
+			"contents": "I_SettlementLevel",
+			"details": "Is this settlement at this level?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "AdviseFinancialBuild",
+			"contents": "AdviseFinancialBuild",
+			"details": "Is this the best thing to build to increase financial production?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "AdviseBuild",
+			"contents": "AdviseBuild",
+			"details": "Is this the best thing to build?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "AdviseRecruit",
+			"contents": "AdviseRecruit",
+			"details": "Is this the best thing to recruit?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "SettlementPopulationMaxedOut",
+			"contents": "SettlementPopulationMaxedOut",
+			"details": "Is the settlement full for its level? (Actually, &gt;95%)",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "SettlementPopulationTooLow",
+			"contents": "SettlementPopulationTooLow",
+			"details": "Is the settlement too empty to recruit from?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "SettlementAutoManaged",
+			"contents": "SettlementAutoManaged",
+			"details": "Is the settlement auto managed in a particular way?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "FeralSettlementAutoManaged",
+			"contents": "FeralSettlementAutoManaged",
+			"details": "Is the settlement auto managed in a particular way?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "PercentageOfPopulationInGarrison",
+			"contents": "PercentageOfPopulationInGarrison",
+			"details": "Check the percentage of population that is currently in the garrison",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "GarrisonToPopulationRatio",
+			"contents": "GarrisonToPopulationRatio",
+			"details": "Calculate the ratio of soldiers to civilians",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "HealthPercentage",
+			"contents": "HealthPercentage",
+			"details": "Check the health of the settlement",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "SettlementHasPlague",
+			"contents": "SettlementHasPlague",
+			"details": "Is the settlement plague-ridden?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "IsFortGarrisoned",
+			"contents": "IsFortGarrisoned",
+			"details": "Are there any troops in the fort?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "IsSettlementGarrisoned",
+			"contents": "IsSettlementGarrisoned",
+			"details": "Are there any troops in the settlement?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "IsSettlementRioting",
+			"contents": "IsSettlementRioting",
+			"details": "Is the settlement rioting at the moment?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_NumberUnitsInSettlement",
+			"contents": "I_NumberUnitsInSettlement",
+			"details": "How many units are in the settlement?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_AdvisorSpeechPlaying",
+			"contents": "I_AdvisorSpeechPlaying",
+			"details": "Detect whether advisor speech is playing or not",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "CharacterIsLocal",
+			"contents": "CharacterIsLocal",
+			"details": "Is the character a member of the local faction?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "TargetCharacterIsLocal",
+			"contents": "TargetCharacterIsLocal",
+			"details": "Is the target character a member of the local faction?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "SettlementIsLocal",
+			"contents": "SettlementIsLocal",
+			"details": "Does the settlement belong to the local faction?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "TargetSettlementIsLocal",
+			"contents": "TargetSettlementIsLocal",
+			"details": "Does the target settlement belong to the local faction?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "RegionIsLocal",
+			"contents": "RegionIsLocal",
+			"details": "Does the region belong to the local faction?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "TargetRegionIsLocal",
+			"contents": "TargetRegionIsLocal",
+			"details": "Does the target region belong to the local faction?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "ArmyIsLocal",
+			"contents": "ArmyIsLocal",
+			"details": "Does the army belong to the local faction?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "ArmyIsGarrison",
+			"contents": "ArmyIsGarrison",
+			"details": "Is the army a garrison?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "TargetArmyIsLocal",
+			"contents": "TargetArmyIsLocal",
+			"details": "Does the target army belong to the local faction?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "FactionIsLocal",
+			"contents": "FactionIsLocal",
+			"details": "Is the faction the local faction?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_LocalFaction",
+			"contents": "I_LocalFaction",
+			"details": "Is the faction the local faction?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "TargetFactionIsLocal",
+			"contents": "TargetFactionIsLocal",
+			"details": "Is the target faction the local faction?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_TurnNumber",
+			"contents": "I_TurnNumber",
+			"details": "The current turn number (starts at 0)",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_MapName",
+			"contents": "I_MapName",
+			"details": "The qualified file name of the current map relative to the data directory",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_ThreadCount",
+			"contents": "I_ThreadCount",
+			"details": "Has this advice thread been incremented many times?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_IsTriggerTrue",
+			"contents": "I_IsTriggerTrue",
+			"details": "Has this advice thread been incremented many times?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "IncomingMessageType",
+			"contents": "IncomingMessageType",
+			"details": "Has this message just been received",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_AdvisorVerbosity",
+			"contents": "I_AdvisorVerbosity",
+			"details": "The advisor verbosity",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_AdvisorVisible",
+			"contents": "I_AdvisorVisible",
+			"details": "Is the advisor currently visible?",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_CharacterSelected",
+			"contents": "I_CharacterSelected",
+			"details": "Detect whether the character is currently selected",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_AgentSelected",
+			"contents": "I_AgentSelected",
+			"details": "Detect whether a character of the specified type is currently selected",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_SettlementSelected",
+			"contents": "I_SettlementSelected",
+			"details": "Detect whether the settlement is currently selected",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "ShortcutTriggered",
+			"contents": "ShortcutTriggered",
+			"details": "Detect whether a keyboard shortcut has been pressed",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_AdvancedStatsScrollIsOpen",
+			"contents": "I_AdvancedStatsScrollIsOpen",
+			"details": "Detect whether the advanced stats scroll is open",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "ButtonPressed",
+			"contents": "ButtonPressed",
+			"details": "Detect whether a button has been pressed",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "ScrollOpened",
+			"contents": "ScrollOpened",
+			"details": "Test for when a named scroll is opened",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "ScrollClosed",
+			"contents": "ScrollClosed",
+			"details": "Test for when a named scroll is closed",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "ScrollAdviceRequested",
+			"contents": "ScrollAdviceRequested",
+			"details": "Test for which scroll advice was requested on",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "I_AnnotationDisplayed",
+			"contents": "I_AnnotationDisplayed",
+			"details": "Detect what annotation scroll is showing",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "FeralUIType",
+			"contents": "FeralUIType",
+			"details": "Detect what UI we are using",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "MerchantIsAvailableToBuild",
+			"contents": "MerchantIsAvailableToBuild",
+			"details": "Building that was built, can recruit merchants",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "SettlementHasDamagedBuilding",
+			"contents": "SettlementHasDamagedBuilding",
+			"details": "Settlement has at least one damaged building",
+			"kind": ["navigation", "C", "Condition"]
+		},
+		{
+			"trigger": "LocalPlayerHasReinforcements",
+			"contents": "LocalPlayerHasReinforcements",
+			"details": "Player has at least one reinforcement army",
+			"kind": ["navigation", "C", "Condition"]
+		},
+	]
+}
