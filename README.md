@@ -13,4 +13,4 @@ Has the following features:
 3. Autocompletion for all conditions, events, commands, and console commands
 
 
-[Screenshot](/assets/screenshot.png)
+![Screenshot](/assets/screenshot.png)
