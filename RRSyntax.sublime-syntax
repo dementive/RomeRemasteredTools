@@ -130,7 +130,7 @@ contexts:
       push: string
 
   operators:
-    - match: '\*|!=|==|:|!|=|&&|>=|<=|-|<|>'
+    - match: '\*|!=|==|:|!|=|&&|\|\||>=|<=|-|<|>'
       scope: keyword
 
   comments:
@@ -254,7 +254,6 @@ contexts:
         - include: message-prompt-includes
         - include: comments
         - match: '}'
-          scope: keyword
           pop: true
 
     - match: \bspawn_army\b
